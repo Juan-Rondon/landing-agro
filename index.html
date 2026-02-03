@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroServicios - Cotización de Servicios Agrícolas</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-tractor"></i>
+                <span>AgroServicios</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#cotizacion">Cotización</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Servicios Agrícolas Profesionales</h1>
+            <p>Soluciones integrales para tu campo. Cotiza nuestros servicios y mejora tu productividad.</p>
+            <a href="#servicios" class="btn-hero">Ver Servicios</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2>Nuestros Servicios Agrícolas</h2>
+            <p class="section-subtitle">Selecciona los servicios que necesitas para tu cotización</p>
+            
+            <div class="services-grid">
+                <!-- Servicio 1 -->
+                <div class="service-card" data-id="1">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Preparación de Terreno">
+                        <button class="add-service-btn" onclick="addToQuote(1)">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="service-info">
+                        <h3>Preparación de Terreno</h3>
+                        <p>Arado, rastreado y nivelación de terrenos para cultivo.</p>
+                        <div class="service-tags">
+                            <span class="tag">Maquinaria</span>
+                            <span class="tag">Terreno</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card" data-id="2">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Siembra">
+                        <button class="add-service-btn" onclick="addToQuote(2)">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="service-info">
+                        <h3>Siembra y Plantación</h3>
+                        <p>Servicios de siembra mecanizada y manual para diversos cultivos.</p>
+                        <div class="service-tags">
+                            <span class="tag">Siembra</span>
+                            <span class="tag">Plantación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card" data-id="3">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Riego">
+                        <button class="add-service-btn" onclick="addToQuote(3)">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="service-info">
+                        <h3>Sistemas de Riego</h3>
+                        <p>Instalación y mantenimiento de sistemas de riego por goteo y aspersión.</p>
+                        <div class="service-tags">
+                            <span class="tag">Riego</span>
+                            <span class="tag">Instalación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card" data-id="4">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fertilización">
+                        <button class="add-service-btn" onclick="addToQuote(4)">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="service-info">
+                        <h3>Fertilización y Abono</h3>
+                        <p>Aplicación de fertilizantes y enmiendas para mejorar suelos.</p>
+                        <div class="service-tags">
+                            <span class="tag">Fertilización</span>
+                            <span class="tag">Suelos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="service-card" data-id="5">
+                    <div class="service-image">
+                        <div class="video-placeholder">
+                            <i class="fas fa-video"></i>
+                            <p>Video demostrativo disponible</p>
+                        </div>
+                        <button class="add-service-btn" onclick="addToQuote(5)">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="service-info">
+                        <h3>Cosecha Mecanizada</h3>
+                        <p>Servicios de cosecha con maquinaria especializada para diferentes cultivos.</p>
+                        <div class="service-tags">
+                            <span class="tag">Cosecha</span>
+                            <span class="tag">Maquinaria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="service-card" data-id="6">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Control de Plagas">
+                        <button class="add-service-btn" onclick="addToQuote(6)">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="service-info">
+                        <h3>Control de Plagas</h3>
+                        <p>Fumigación y control integrado de plagas y enfermedades.</p>
+                        <div class="service-tags">
+                            <span class="tag">Plagas</span>
+                            <span class="tag">Fumigación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cotización -->
+    <section id="cotizacion" class="quote-section">
+        <div class="container">
+            <h2>Tu Cotización</h2>
+            <p class="section-subtitle">Agrega servicios y completa tus datos para enviar la cotización por WhatsApp</p>
+            
+            <div class="quote-container">
+                <div class="quote-summary">
+                    <h3>Servicios Seleccionados</h3>
+                    <div id="quote-items" class="quote-items">
+                        <p class="empty-quote">No hay servicios agregados. Selecciona servicios de la lista.</p>
+                    </div>
+                    <div class="quote-total">
+                        <p>Servicios seleccionados: <span id="total-items">0</span></p>
+                        <button onclick="clearQuote()" class="btn-clear">
+                            <i class="fas fa-trash"></i> Limpiar Todo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="quote-form">
+                    <h3>Datos para la Cotización</h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nombre Completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Ej: +51 987 654 321">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="Ej: juan@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Ubicación del Terreno *</label>
+                            <input type="text" id="location" name="location" required placeholder="Ej: Valle de Santa, Lima">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="area"><i class="fas fa-ruler-combined"></i> Área del Terreno (hectáreas)</label>
+                            <input type="number" id="area" name="area" min="0" step="0.1" placeholder="Ej: 5.5">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Mensaje Adicional</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Detalles adicionales sobre tu requerimiento..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" onclick="sendWhatsAppQuote()" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                            </button>
+                            <p class="form-note">* Los campos marcados con asterisco son obligatorios</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3><i class="fas fa-tractor"></i> AgroServicios</h3>
+                    <p>Soluciones agrícolas integrales para mejorar la productividad de tu campo.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+                        <p><i class="fas fa-envelope"></i> info@agroservicios.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#cotizacion">Cotización</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroServicios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para confirmación -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>¡Cotización Lista!</h3>
+            <p id="modalMessage">Se abrirá WhatsApp con tu cotización. Verifica la información antes de enviar.</p>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="btn-cancel">Cancelar</button>
+                <button onclick="proceedToWhatsApp()" class="btn-confirm">Abrir WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
