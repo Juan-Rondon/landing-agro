@@ -96,6 +96,8 @@ const serviciosDetalles = {
     }
 };
 
+
+
 // Variables globales
 let cotizacion = [];
 let modalAbierto = false;
@@ -109,6 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
         cotizacion = JSON.parse(savedQuote);
         actualizarCotizacion();
     }
+
+
 
     // Lógica para animaciones de revelado al hacer scroll
     const observerOptions = {
