@@ -13,18 +13,45 @@ let cotizacion = [];
 let modalAbierto = false;
 
 // Cargar cotización desde localStorage al iniciar
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const savedQuote = localStorage.getItem('agroCotizacion');
     if (savedQuote) {
         cotizacion = JSON.parse(savedQuote);
         actualizarCotizacion();
     }
+
+    // Lógica para animaciones de revelado al hacer scroll
+    const observerOptions = {
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Header dinámico (cambio al hacer scroll)
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
 
 // Agregar servicio a la cotización
 function addToQuote(serviceId) {
     const servicio = servicios[serviceId];
-    
+
     // Verificar si ya está en la cotización
     if (!cotizacion.find(item => item.id === serviceId)) {
         cotizacion.push({
@@ -33,13 +60,13 @@ function addToQuote(serviceId) {
             descripcion: servicio.descripcion,
             agregado: new Date().toLocaleString()
         });
-        
+
         // Guardar en localStorage
         localStorage.setItem('agroCotizacion', JSON.stringify(cotizacion));
-        
+
         // Actualizar vista
         actualizarCotizacion();
-        
+
         // Feedback visual
         mostrarNotificacion(`"${servicio.nombre}" agregado a la cotización`);
     } else {
@@ -73,16 +100,16 @@ function clearQuote() {
 function actualizarCotizacion() {
     const quoteItems = document.getElementById('quote-items');
     const totalItems = document.getElementById('total-items');
-    
+
     // Actualizar contador
     totalItems.textContent = cotizacion.length;
-    
+
     // Actualizar lista
     if (cotizacion.length === 0) {
         quoteItems.innerHTML = '<p class="empty-quote">No hay servicios agregados. Selecciona servicios de la lista.</p>';
         return;
     }
-    
+
     let html = '';
     cotizacion.forEach(item => {
         html += `
@@ -94,7 +121,7 @@ function actualizarCotizacion() {
             </div>
         `;
     });
-    
+
     quoteItems.innerHTML = html;
 }
 
@@ -103,18 +130,18 @@ function validarFormulario() {
     const form = document.getElementById('quoteForm');
     const requiredFields = form.querySelectorAll('[required]');
     let isValid = true;
-    
+
     // Resetear estilos
     requiredFields.forEach(field => {
         field.style.borderColor = '#ddd';
     });
-    
+
     // Validar campos requeridos
     requiredFields.forEach(field => {
         if (!field.value.trim()) {
             field.style.borderColor = '#ff4444';
             isValid = false;
-            
+
             // Scroll al primer campo inválido
             if (isValid === false) {
                 field.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -122,7 +149,7 @@ function validarFormulario() {
             }
         }
     });
-    
+
     // Validar teléfono (formato básico)
     const phoneField = document.getElementById('phone');
     const phoneRegex = /^[\+]?[0-9\s\-\(\)]+$/;
@@ -131,7 +158,7 @@ function validarFormulario() {
         mostrarNotificacion('Por favor, ingresa un número de teléfono válido', 'warning');
         isValid = false;
     }
-    
+
     return isValid;
 }
 
@@ -145,29 +172,32 @@ function prepararMensajeWhatsApp() {
         area: document.getElementById('area').value || 'No especificada',
         mensaje: document.getElementById('message').value || 'Sin mensaje adicional'
     };
-    
+
     // Construir mensaje
-    let mensaje = `*Nueva Cotización - AgroServicios*\n\n`;
-    mensaje += `*Datos del Cliente:*\n`;
-    mensaje += `👤 Nombre: ${formData.nombre}\n`;
-    mensaje += `📞 Teléfono: ${formData.telefono}\n`;
-    mensaje += `📧 Email: ${formData.email}\n`;
-    mensaje += `📍 Ubicación: ${formData.ubicacion}\n`;
-    mensaje += `📐 Área: ${formData.area} hectáreas\n\n`;
-    
-    mensaje += `*Servicios solicitados:*\n`;
+    let mensaje = `*NUEVA COTIZACIÓN - AGROSERVICIOS*\n`;
+    mensaje += `------------------------------------------\n\n`;
+    mensaje += `*DATOS DEL CLIENTE:*\n`;
+    mensaje += `- Nombre: ${formData.nombre}\n`;
+    mensaje += `- Teléfono: ${formData.telefono}\n`;
+    mensaje += `- Email: ${formData.email}\n`;
+    mensaje += `- Ubicación: ${formData.ubicacion}\n`;
+    mensaje += `- Área: ${formData.area} hectáreas\n\n`;
+
+    mensaje += `*SERVICIOS SOLICITADOS:*\n`;
     if (cotizacion.length === 0) {
-        mensaje += `No hay servicios seleccionados\n`;
+        mensaje += `Ningún servicio seleccionado\n`;
     } else {
         cotizacion.forEach((item, index) => {
             mensaje += `${index + 1}. ${item.nombre}\n`;
         });
     }
-    mensaje += `\n*Total servicios:* ${cotizacion.length}\n\n`;
-    
-    mensaje += `*Mensaje adicional:*\n${formData.mensaje}\n\n`;
-    mensaje += `_Esta cotización fue generada desde la página web_`;
-    
+
+    mensaje += `\n*TOTAL SERVICIOS:* ${cotizacion.length}\n`;
+    mensaje += `------------------------------------------\n\n`;
+
+    mensaje += `*MENSAJE ADICIONAL:*\n${formData.mensaje}\n\n`;
+    mensaje += `_Generado desde la página web de AgroServicios_`;
+
     return encodeURIComponent(mensaje);
 }
 
@@ -175,13 +205,13 @@ function prepararMensajeWhatsApp() {
 function mostrarModal() {
     const modal = document.getElementById('confirmationModal');
     const modalMessage = document.getElementById('modalMessage');
-    
+
     if (cotizacion.length === 0) {
         modalMessage.textContent = 'No has agregado ningún servicio a la cotización. ¿Deseas continuar?';
     } else {
         modalMessage.textContent = `Vas a enviar una cotización con ${cotizacion.length} servicio(s). Se abrirá WhatsApp para completar el envío.`;
     }
-    
+
     modal.style.display = 'flex';
     modalAbierto = true;
     document.body.style.overflow = 'hidden';
@@ -200,16 +230,16 @@ function proceedToWhatsApp() {
     const mensaje = prepararMensajeWhatsApp();
     const telefonoEmpresa = '+573161297288'; // Reemplazar con número real
     const urlWhatsApp = `https://wa.me/${telefonoEmpresa}?text=${mensaje}`;
-    
+
     // Limpiar cotización después de enviar
     cotizacion = [];
     localStorage.removeItem('agroCotizacion');
     actualizarCotizacion();
-    
+
     // Cerrar modal y abrir WhatsApp
     closeModal();
     window.open(urlWhatsApp, '_blank');
-    
+
     // Mostrar confirmación
     setTimeout(() => {
         mostrarNotificacion('¡Cotización enviada con éxito!', 'success');
@@ -222,7 +252,7 @@ function sendWhatsAppQuote() {
         mostrarNotificacion('Por favor, completa todos los campos obligatorios', 'warning');
         return;
     }
-    
+
     mostrarModal();
 }
 
@@ -246,7 +276,7 @@ function mostrarNotificacion(mensaje, tipo = 'success') {
         min-width: 300px;
         max-width: 400px;
     `;
-    
+
     // Estilos según tipo
     if (tipo === 'success') {
         notificacion.style.backgroundColor = '#4caf50';
@@ -255,10 +285,10 @@ function mostrarNotificacion(mensaje, tipo = 'success') {
     } else if (tipo === 'info') {
         notificacion.style.backgroundColor = '#2196f3';
     }
-    
+
     // Agregar al DOM
     document.body.appendChild(notificacion);
-    
+
     // Remover después de 3 segundos
     setTimeout(() => {
         notificacion.style.animation = 'slideOut 0.3s ease-out';
@@ -268,7 +298,7 @@ function mostrarNotificacion(mensaje, tipo = 'success') {
             }
         }, 300);
     }, 3000);
-    
+
     // Agregar estilos de animación si no existen
     if (!document.querySelector('#notificacion-styles')) {
         const styles = document.createElement('style');
@@ -288,7 +318,7 @@ function mostrarNotificacion(mensaje, tipo = 'success') {
 }
 
 // Cerrar modal con ESC
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape' && modalAbierto) {
         closeModal();
     }
@@ -296,16 +326,16 @@ document.addEventListener('keydown', function(event) {
 
 // Smooth scroll para enlaces de navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             const headerHeight = document.querySelector('header').offsetHeight;
             const targetPosition = targetElement.offsetTop - headerHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -316,7 +346,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Guardar datos del formulario localmente mientras se completa
 document.querySelectorAll('#quoteForm input, #quoteForm textarea').forEach(element => {
-    element.addEventListener('input', function() {
+    element.addEventListener('input', function () {
         const formData = {
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
@@ -330,7 +360,7 @@ document.querySelectorAll('#quoteForm input, #quoteForm textarea').forEach(eleme
 });
 
 // Cargar datos guardados del formulario
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const savedFormData = localStorage.getItem('agroFormData');
     if (savedFormData) {
         const formData = JSON.parse(savedFormData);
