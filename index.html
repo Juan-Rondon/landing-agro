@@ -104,7 +104,7 @@
 
             <div class="services-grid">
                 <!-- Servicio 1 -->
-                <div class="service-card reveal" data-id="1">
+                <div class="service-card reveal" data-id="1" onclick="openServiceModal(1)">
                     <div class="service-image">
                         <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Preparación de Terreno">
@@ -118,14 +118,14 @@
                             <li><i class="fas fa-check"></i> Arado de precisión</li>
                             <li><i class="fas fa-check"></i> Nivelación de suelos</li>
                         </ul>
-                        <button class="btn-add-large" onclick="addToQuote(1)">
+                        <button class="btn-add-large" onclick="addToQuote(1); event.stopPropagation();">
                             <i class="fas fa-plus-circle"></i> Añadir a mi lista
                         </button>
                     </div>
                 </div>
 
                 <!-- Servicio 2 -->
-                <div class="service-card reveal" data-id="2">
+                <div class="service-card reveal" data-id="2" onclick="openServiceModal(2)">
                     <div class="service-image">
                         <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Siembra">
@@ -139,14 +139,14 @@
                             <li><i class="fas fa-check"></i> Sembrado mecanizado</li>
                             <li><i class="fas fa-check"></i> Máxima germinación</li>
                         </ul>
-                        <button class="btn-add-large" onclick="addToQuote(2)">
+                        <button class="btn-add-large" onclick="addToQuote(2); event.stopPropagation();">
                             <i class="fas fa-plus-circle"></i> Añadir a mi lista
                         </button>
                     </div>
                 </div>
 
                 <!-- Servicio 3 -->
-                <div class="service-card reveal" data-id="3">
+                <div class="service-card reveal" data-id="3" onclick="openServiceModal(3)">
                     <div class="service-image">
                         <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Riego">
@@ -160,14 +160,14 @@
                             <li><i class="fas fa-check"></i> Riego por goteo</li>
                             <li><i class="fas fa-check"></i> Ahorro de agua garantizado</li>
                         </ul>
-                        <button class="btn-add-large" onclick="addToQuote(3)">
+                        <button class="btn-add-large" onclick="addToQuote(3); event.stopPropagation();">
                             <i class="fas fa-plus-circle"></i> Añadir a mi lista
                         </button>
                     </div>
                 </div>
 
                 <!-- Servicio 4 -->
-                <div class="service-card reveal" data-id="4">
+                <div class="service-card reveal" data-id="4" onclick="openServiceModal(4)">
                     <div class="service-image">
                         <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Fertilización">
@@ -181,14 +181,14 @@
                             <li><i class="fas fa-check"></i> Nutrición balanceada</li>
                             <li><i class="fas fa-check"></i> Mayor vigor en la planta</li>
                         </ul>
-                        <button class="btn-add-large" onclick="addToQuote(4)">
+                        <button class="btn-add-large" onclick="addToQuote(4); event.stopPropagation();">
                             <i class="fas fa-plus-circle"></i> Añadir a mi lista
                         </button>
                     </div>
                 </div>
 
                 <!-- Servicio 5 -->
-                <div class="service-card reveal" data-id="5">
+                <div class="service-card reveal" data-id="5" onclick="openServiceModal(5)">
                     <div class="service-image">
                         <img src="https://images.unsplash.com/photo-1530513511394-87779d7bc7d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Cosecha">
@@ -202,14 +202,14 @@
                             <li><i class="fas fa-check"></i> Cosecha sin daños</li>
                             <li><i class="fas fa-check"></i> Ahorro de tiempo</li>
                         </ul>
-                        <button class="btn-add-large" onclick="addToQuote(5)">
+                        <button class="btn-add-large" onclick="addToQuote(5); event.stopPropagation();">
                             <i class="fas fa-plus-circle"></i> Añadir a mi lista
                         </button>
                     </div>
                 </div>
 
                 <!-- Servicio 6 -->
-                <div class="service-card reveal" data-id="6">
+                <div class="service-card reveal" data-id="6" onclick="openServiceModal(6)">
                     <div class="service-image">
                         <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Control de Plagas">
@@ -223,7 +223,7 @@
                             <li><i class="fas fa-check"></i> Fumigación con drones</li>
                             <li><i class="fas fa-check"></i> Menos químicos dañinos</li>
                         </ul>
-                        <button class="btn-add-large" onclick="addToQuote(6)">
+                        <button class="btn-add-large" onclick="addToQuote(6); event.stopPropagation();">
                             <i class="fas fa-plus-circle"></i> Añadir a mi lista
                         </button>
                     </div>
@@ -403,6 +403,60 @@
             <i class="fab fa-whatsapp"></i>
         </div>
     </a>
+
+    <!-- Modal de Detalles del Servicio -->
+    <div id="serviceDetailsModal" class="modal service-details-modal">
+        <div class="modal-content details-container">
+            <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+
+            <div class="details-layout">
+                <!-- Mitad Izquierda: Slider -->
+                <div class="details-media">
+                    <div class="slider-wrapper">
+                        <div id="serviceSlider" class="slider-track">
+                            <!-- Imágenes y video se cargarán dinámicamente -->
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+                    </div>
+                    <div id="sliderDots" class="slider-dots"></div>
+                </div>
+
+                <!-- Mitad Derecha: Info Estilo Social -->
+                <div class="details-info-box">
+                    <div class="info-user-header">
+                        <div class="user-avatar">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <div class="user-meta">
+                            <span class="user-name">AgroServicios</span>
+                            <span id="detailTag" class="tag-compact">Categoría</span>
+                        </div>
+                    </div>
+
+                    <div class="info-scroll-content">
+                        <h2 id="detailTitle">Título del Servicio</h2>
+                        <p id="detailDescription">Descripción detallada del servicio.</p>
+
+                        <div class="benefits-section">
+                            <h4>Beneficios Clave</h4>
+                            <ul id="detailFeatures" class="social-benefits-list">
+                                <!-- Características dinámicas -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-social-footer">
+                        <div class="cta-container">
+                            <button id="detailAddBtn" class="btn-instagram-style">
+                                <i class="fas fa-cart-plus"></i> Cotizar Servicio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
