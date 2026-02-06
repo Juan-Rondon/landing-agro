@@ -408,7 +408,7 @@ function updateSlider() {
 // Proceder a WhatsApp
 function proceedToWhatsApp() {
     const mensaje = prepararMensajeWhatsApp();
-    const telefonoEmpresa = '+573161297288'; // Reemplazar con número real
+    const telefonoEmpresa = '+573013471279'; // Reemplazar con número real
     const urlWhatsApp = `https://wa.me/${telefonoEmpresa}?text=${mensaje}`;
 
     // Limpiar cotización después de enviar

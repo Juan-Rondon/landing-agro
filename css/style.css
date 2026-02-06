@@ -111,6 +111,10 @@ header.scrolled .logo {
     margin-top: 15px;
 }
 
+.logo i {
+    font-family: inherit;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
