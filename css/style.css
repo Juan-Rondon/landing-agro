@@ -630,19 +630,34 @@ h2 {
 /* Stats Section */
 .stats {
     background: var(--primary-dark);
-    padding: 80px 0;
+    padding: 60px 0;
     color: var(--white);
 }
 
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+    margin: 0; 
+}
+
 .stat-item h3 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.5rem;
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .stat-item p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: var(--white);
     opacity: 0.8;
 }
 
