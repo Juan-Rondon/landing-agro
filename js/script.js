@@ -17,26 +17,40 @@ const servicios = {
 const serviciosDetalles = {
     1: {
         tag: "Preparación",
-        titulo: "Preparación de Terrenos con Maquinaria Pesada",
-        descripcion: "Adecuación integral del terreno para todo tipo de cultivos utilizando maquinaria agrícola especializada de alto rendimiento.",
+        titulo: "Preparación de Terrenos",
+        descripcion: `Nuestro servicio de Preparación de Terrenos está enfocado en optimizar las condiciones físicas del 
+            suelo antes del establecimiento del cultivo. Realizamos nivelación, descompactación y acondicionamiento estructural 
+            para garantizar una base uniforme y estable. Además, evaluamos la composición del suelo y aplicamos técnicas para 
+            mejorar la aireación y drenaje. Esto permite un crecimiento radicular más profundo, facilita el tránsito de maquinaria 
+            y asegura un terreno productivo durante toda la temporada agrícola.`,
         caracteristicas: [
-            "Uso de maquinaria pesada",
-            "Nivelación y acondicionamiento",
-            "Base óptima para siembra"
+            'Análisis y evaluación técnica del suelo',
+            'Corrección de desniveles y microrelieves',
+            'Optimización de infiltración y drenaje',
+            'Preparación para maquinaria pesada',
+            'Suelo uniforme para siembra eficiente'
         ],
         media: [
-            { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" }
+            { tipo: "img", url: "images/service_1/preparacion_terrenos_1.jpg" },
+            { tipo: "img", url: "images/service_1/preparacion_terrenos_2.jpg" },
+            { tipo: "img", url: "images/service_1/preparacion_terrenos_3.jpg" },
+            { tipo: "img", url: "images/service_1/preparacion_terrenos_4.jpg" }
         ]
     },
 
     2: {
         tag: "Preparación",
         titulo: "Encalle o Despaje",
-        descripcion: "Organización y retiro técnico de residuos vegetales formando calles estratégicas para mejorar el manejo del cultivo.",
+        descripcion: `El servicio de Encalle o Despaje organiza los residuos vegetales y despeja calles técnicas en el terreno, 
+            asegurando un paso seguro de maquinaria y facilitando la planificación de labores agrícolas. Además, permite mejorar la 
+            aireación del suelo, prevenir acumulación de humedad y residuos, y optimizar la eficiencia operativa del lote, 
+            contribuyendo a un manejo más sostenible y productivo.`,
         caracteristicas: [
-            "Formación de calles 2x1 o 4x1",
-            "Uso de despajadora tipo Lelly",
-            "Mejor movilidad en el lote"
+            'Organización estratégica de residuos',
+            'Prevención de acumulación de material orgánico',
+            'Optimización del tránsito de maquinaria',
+            'Facilitación de labores posteriores',
+            'Mejora de condiciones sanitarias del terreno'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" }
@@ -46,11 +60,16 @@ const serviciosDetalles = {
     3: {
         tag: "Preparación",
         titulo: "Roturación con Subsuelo",
-        descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar aireación, drenaje y desarrollo radicular.",
+        descripcion: `La Roturación con Subsuelo es una labranza profunda que permite romper capas compactadas del terreno que 
+            limitan la absorción de agua y nutrientes. Utilizando maquinaria de alta potencia y técnicas especializadas, se mejora 
+            la estructura interna del suelo sin afectar la superficie productiva. Esto incrementa la oxigenación, favorece el drenaje 
+            y asegura un desarrollo radicular más eficiente para cultivos de alto rendimiento.`,
         caracteristicas: [
-            "Trabajo hasta 60 cm",
-            "Mejora infiltración de agua",
-            "Uso de tractor categoría 6"
+            'Fractura de capas compactadas profundas',
+            'Mejora de oxigenación y drenaje',
+            'Incremento de absorción de nutrientes',
+            'Reducción de compactación natural',
+            'Preparación para cultivos exigentes'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
@@ -60,11 +79,16 @@ const serviciosDetalles = {
     4: {
         tag: "Preparación",
         titulo: "Roturación con Subsuelo Triple",
-        descripcion: "Labranza profunda con implemento de tres brazos que permite mayor cobertura y eficiencia por hectárea.",
+        descripcion: `La Roturación con Subsuelo Triple utiliza un implemento de tres brazos que amplía la cobertura y permite 
+            una fractura más uniforme del terreno. Esta técnica reduce la compactación, mejora el drenaje y la oxigenación del suelo. 
+            Gracias a su eficiencia, se disminuye el tiempo de trabajo y se garantiza que el terreno esté listo para el establecimiento 
+            de cultivos con raíces profundas y uniformes.`,
         caracteristicas: [
-            "Implemento triple brazo",
-            "Mayor cobertura de terreno",
-            "Fractura uniforme del suelo"
+            'Implemento de triple brazo para mayor cobertura',
+            'Optimización de tiempo de trabajo',
+            'Reducción de zonas compactadas',
+            'Mejor drenaje y oxigenación',
+            'Preparación uniforme del lote'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
@@ -74,11 +98,16 @@ const serviciosDetalles = {
     5: {
         tag: "Preparación",
         titulo: "Roturación con Subesca",
-        descripcion: "Intervención mecánica que mejora la estructura del suelo y favorece la absorción de agua y nutrientes.",
+        descripcion: `La Roturación con Subesca actúa en capas estratégicas del terreno para mejorar su estructura física y su 
+            capacidad de retención de agua. Esta técnica optimiza la circulación de aire, aumenta la disponibilidad de nutrientes y 
+            facilita la implantación uniforme de cultivos. Con ello, se logra un suelo más estable y fértil, listo para soportar un 
+            crecimiento óptimo y constante de las plantas.`,
         caracteristicas: [
-            "Mejora estructura del suelo",
-            "Mayor infiltración de agua",
-            "Preparación eficiente para siembra"
+            'Intervención precisa en capas internas del suelo',
+            'Mejora retención de humedad y aireación',
+            'Aumenta disponibilidad de nutrientes',
+            'Facilita implantación uniforme de cultivos',
+            'Suelo más fértil y estable'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
@@ -87,13 +116,17 @@ const serviciosDetalles = {
 
     6: {
         tag: "Suelos",
-        titulo: "Rastroarado del Terreno",
-        descripcion: "Labranza profunda posterior a la subsolada que reduce terrones, mejora la estructura del suelo y optimiza la preparación para la siembra.",
+        titulo: "Escarificada",
+        descripcion: `La Escarificada afina la superficie del terreno, rompe compactaciones superficiales y mejora la aireación. 
+            Esto prepara el terreno para una siembra más precisa y homogénea, permitiendo un desarrollo inicial más fuerte de las 
+            raíces y mejorando la absorción de nutrientes. Es una intervención clave para garantizar que el cultivo comience con las 
+            mejores condiciones posibles.`,
         caracteristicas: [
-            "Reducción de terrones grandes",
-            "Profundidad de 30 a 40 cm",
-            "Mejora contacto semilla-suelo",
-            "Trabajo perpendicular a surcos (90°)"
+            'Reducción de terrones grandes',
+            'Mejora de estructura superficial',
+            'Incremento de aireación y drenaje',
+            'Preparación para siembra mecanizada',
+            'Optimización de crecimiento inicial'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" }
@@ -101,14 +134,17 @@ const serviciosDetalles = {
     },
 
     7: {
-        tag: "Preparación de Suelos",
-        titulo: "Subsolado del Terreno",
-        descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar la aireación, el drenaje y el desarrollo radicular del cultivo.",
+        tag: "Manejo de Cultivo",
+        titulo: "Cultivo aporque con pala",
+        descripcion: `El Cultivo aporque con pala consiste en amontonar tierra alrededor de la base de la planta para favorecer 
+            el desarrollo radicular, retener humedad y proteger la planta de plagas y estrés ambiental. Esto incrementa la absorción 
+            de nutrientes y garantiza un crecimiento más uniforme y saludable del cultivo, optimizando la producción final.`,
         caracteristicas: [
-            "Roturación hasta 60 cm",
-            "Mejora flujo de agua y aire",
-            "Uso de arado de subsuelo",
-            "Tractor categoría 6 (200-290 HP)"
+            'Protección radicular contra estrés ambiental',
+            'Mejora de retención de humedad',
+            'Incremento en absorción de nutrientes',
+            'Favorece desarrollo uniforme de plantas',
+            'Optimización del rendimiento del cultivo'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80" }
@@ -116,14 +152,17 @@ const serviciosDetalles = {
     },
 
     8: {
-        tag: "Suelos",
-        titulo: "Subsolado Técnico y Evaluado",
-        descripcion: "Labor especializada con arado de subsuelo que incluye planificación de dirección, señalización del terreno y evaluación técnica de calidad.",
+        tag: "Manejo de Cultivo",
+        titulo: "Aporque para control de maleza",
+        descripcion: `El Aporque para control de maleza es una técnica que permite eliminar la maleza alrededor de las plantas 
+            mientras se airea el suelo y se mejora su estructura. Esto asegura un desarrollo radicular más eficiente, protege el 
+            cultivo y facilita futuras labores agrícolas, incrementando la productividad y calidad del cultivo.`,
         caracteristicas: [
-            "Dirección alineada al surcado",
-            "Señalización del terreno",
-            "Evaluación técnica (FORCTN2)",
-            "Control de calidad de preparación"
+            'Eliminación de maleza sin dañar raíces',
+            'Mejora aireación y drenaje',
+            'Protección del cultivo',
+            'Facilita labores posteriores',
+            'Optimización del crecimiento de plantas'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
@@ -131,14 +170,17 @@ const serviciosDetalles = {
     },
 
     9: {
-        tag: "Preparacion",
-        titulo: "Roturación con Arado de Subsuelo",
-        descripcion: "Labranza profunda que descompacta el suelo hasta 60 cm, mejorando la aireación y el desarrollo radicular del cultivo.",
+        tag: "Fertilización",
+        titulo: "Abono con pala",
+        descripcion: `El Abono con pala permite aplicar fertilizantes de manera manual asegurando una distribución homogénea y 
+            controlada de nutrientes en el suelo. Esto mejora la fertilidad, potencia el desarrollo radicular y asegura un 
+            crecimiento uniforme de las plantas, aumentando la productividad y calidad del cultivo.`,
         caracteristicas: [
-            "Descompactación profunda del suelo",
-            "Trabajo hasta 60 cm de profundidad",
-            "Mejora drenaje y aireación",
-            "Uso de tractor categoría 6 (200-290 HP)"
+            'Distribución homogénea de fertilizante',
+            'Mejora de fertilidad del suelo',
+            'Incremento de absorción de nutrientes',
+            'Control de dosificación',
+            'Optimización de crecimiento del cultivo'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" }
@@ -146,12 +188,18 @@ const serviciosDetalles = {
     },
 
     10: {
-        tag: "Preparación",
-        titulo: "Encalle o Despaje",
-        descripcion: "Recolección y organización de residuos vegetales en calles definidas (2x1 o 4x1), facilitando las labores posteriores del cultivo y mejorando el orden del terreno.",
+        tag: "Obras de Drenaje",
+        titulo: "Reconstrucción de Acequías",
+        descripcion: `Nuestro servicio de Reconstrucción de Acequías se centra en reparar, ampliar y mejorar canales de riego, 
+            garantizando un flujo eficiente del agua en el terreno agrícola. Esto previene erosión, asegura una distribución uniforme 
+            del recurso hídrico y facilita un mejor manejo del riego para todos los cultivos. También contribuye a prolongar la vida 
+            útil de las acequías y mejorar la sostenibilidad del lote.`,
         caracteristicas: [
-            "Despajadora tipo Lelly",
-            "Formación de calles 2x1 o 4x1"
+            'Reparación y mantenimiento de canales',
+            'Optimización de flujo de agua',
+            'Prevención de erosión y pérdidas',
+            'Mejora de eficiencia hídrica',
+            'Prolonga vida útil del sistema de riego'
         ],
         media: [
             { tipo: "img", url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" }

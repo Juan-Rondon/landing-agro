@@ -104,221 +104,216 @@
             <p class="section-subtitle">Selecciona los servicios que necesitas para tu cotización</p>
 
             <div class="services-grid">
-                <!-- SERVICIO 1 -->
-                <div class="service-card reveal" data-id="1" onclick="openServiceModal(1)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Surcada del Terreno">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparacion</span>
-                        <h3>Preparación de Terrenos con Maquinaria Pesada</h3>
-                        <p>Adecuación integral del terreno para todo tipo de cultivos 
-                            utilizando maquinaria agrícola especializada.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Uso de maquinaria pesada</li>
-                            <li><i class="fas fa-check"></i> Nivelación y acondicionamiento del terreno</li>
-                            <li><i class="fas fa-check"></i> Base óptima para siembra</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(1); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 1 -->
+            <div class="service-card reveal" data-id="1" onclick="openServiceModal(1)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Preparación de Terrenos">
                 </div>
-
-                <!-- Servicio 2 -->
-                <div class="service-card reveal" data-id="2" onclick="openServiceModal(2)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Fertilización">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparación</span>
-                        <h3>Encalle o Despaje</h3>
-                        <p>Organización técnica de residuos vegetales formando calles estratégicas para el cultivo.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Formación 2x1 o 4x1</li>
-                            <li><i class="fas fa-check"></i> Despajadora tipo Lelly</li>
-                            <li><i class="fas fa-check"></i> Mejor movilidad del lote</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(2); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+                <div class="service-info">
+                    <span class="tag">Preparación</span>
+                    <h3>Preparación de Terrenos</h3>
+                    <p>Optimización del terreno para siembra, asegurando una base fértil y nivelada.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Nivelación precisa</li>
+                        <li><i class="fas fa-check"></i> Mejor estructura del suelo</li>
+                        <li><i class="fas fa-check"></i> Preparación con maquinaria pesada</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(1); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
                 </div>
+            </div>
 
-                <!-- Servicio 3 -->
-                <div class="service-card reveal" data-id="3" onclick="openServiceModal(3)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Pre Cosecha de Caña de Azúcar">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparacion</span>
-                        <h3>Roturación con Subsuelo</h3>
-                        <p>Descompactación profunda hasta 60 cm para mejorar aireación y drenaje.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Trabajo hasta 60 cm</li>
-                            <li><i class="fas fa-check"></i> Mejora infiltración</li>
-                            <li><i class="fas fa-check"></i> Tractor categoría 6</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(3); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 2 -->
+            <div class="service-card reveal" data-id="2" onclick="openServiceModal(2)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+                        alt="Encalle o Despaje">
                 </div>
-
-                <!-- Servicio 4 -->
-                <div class="service-card reveal" data-id="4" onclick="openServiceModal(4)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
-                            alt="Surcado con tractor">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparacion</span>
-                        <h3>Roturación con Subsuelo Triple</h3>
-                        <p>Labranza profunda con implemento de tres brazos para mayor cobertura.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Fractura uniforme</li>
-                            <li><i class="fas fa-check"></i> Mayor cobertura</li>
-                            <li><i class="fas fa-check"></i> Triple brazo</li>
-                        </ul>
-
-                        <button class="btn-add-large" onclick="addToQuote(4); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+                <div class="service-info">
+                    <span class="tag">Preparación</span>
+                    <h3>Encalle o Despaje</h3>
+                    <p>Limpieza estratégica del terreno y formación de calles técnicas para mejor manejo.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Formación de calles 2x1 o 4x1</li>
+                        <li><i class="fas fa-check"></i> Eliminación de maleza y residuos</li>
+                        <li><i class="fas fa-check"></i> Mejora movilidad de maquinaria</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(2); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
                 </div>
+            </div>
 
-
-                <!-- Servicio 5 -->
-                <div class="service-card reveal" data-id="5" onclick="openServiceModal(5)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
-                            alt="Roturación con Subsuelo">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparacion</span>
-                        <h3>Roturación con Subesca</h3>
-                        <p>Mejora estructural del suelo favoreciendo absorción de agua y nutrientes.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Preparacion eficiente</li>
-                            <li><i class="fas fa-check"></i> Mayor infiltracion</li>
-                            <li><i class="fas fa-check"></i> Mejora estructura del suelo</li>
-                        </ul>
-
-                        <button class="btn-add-large" onclick="addToQuote(5); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 3 -->
+            <div class="service-card reveal" data-id="3" onclick="openServiceModal(3)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Roturación con Subsuelo">
                 </div>
-
-                <!-- Servicio 6 -->
-                <div class="service-card reveal" data-id="6" onclick="openServiceModal(6)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Control de Plagas">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Suelos</span>
-                        <h3>Rastroarado del Terreno</h3>
-                        <p>Labranza posterior que reduce terrones y optimiza la siembra.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Reducción de terrones grandes</li>
-                            <li><i class="fas fa-check"></i> Profundidad de 30 a 40 cm</li>
-                            <li><i class="fas fa-check"></i> Trabajo perpendicular a surcos (90°)</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(6); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+                <div class="service-info">
+                    <span class="tag">Preparación</span>
+                    <h3>Roturación con Subsuelo</h3>
+                    <p>Labranza profunda que rompe capas compactadas y mejora el desarrollo radicular.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Trabajo hasta 60 cm</li>
+                        <li><i class="fas fa-check"></i> Mejora drenaje y aireación</li>
+                        <li><i class="fas fa-check"></i> Uso de tractor categoría 6</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(3); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
                 </div>
+            </div>
 
-                <!-- Servicio 7 -->
-                <div class="service-card reveal" data-id="7" onclick="openServiceModal(7)">
-                    <div class="service-image"> 
-                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80"
-                            alt="Subsolado del terreno">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparación de Suelos</span>
-                        <h3>Subsolado del Terreno</h3>
-                        <p>Descompactación profunda para mejorar drenaje y desarrollo radicular.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Roturación hasta 60 cm</li>
-                            <li><i class="fas fa-check"></i> Mejora flujo de agua y aire</li>
-                            <li><i class="fas fa-check"></i> Uso de arado de subsuelo</li>
-                            <li><i class="fas fa-check"></i> Tractor categoría 6 (200-290 HP)</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(7); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 4 -->
+            <div class="service-card reveal" data-id="4" onclick="openServiceModal(4)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                        alt="Roturación con Subsuelo Triple">
                 </div>
+                <div class="service-info">
+                    <span class="tag">Preparación</span>
+                    <h3>Roturación con Subsuelo Triple</h3>
+                    <p>Labranza con triple brazo para mayor cobertura y eficiencia estructural del suelo.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Fractura uniforme</li>
+                        <li><i class="fas fa-check"></i> Triple cobertura de trabajo</li>
+                        <li><i class="fas fa-check"></i> Mejor aireación del suelo</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(4); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
 
-                <!-- Servicio 8 -->
-                <div class="service-card reveal" data-id="8" onclick="openServiceModal(8)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
-                            alt="Arado de subsuelo en campo">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Suelos</span>
-                        <h3>Subsolado Técnico y Evaluado</h3>
-                        <p>Labor especializada con planificación y control de calidad.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Dirección alineada al surcado</li>
-                            <li><i class="fas fa-check"></i> Señalización del terreno</li>
-                            <li><i class="fas fa-check"></i> Evaluación técnica (FORCTN2)</li>
-                            <li><i class="fas fa-check"></i> Control de calidad de preparación</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(8); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 5 -->
+            <div class="service-card reveal" data-id="5" onclick="openServiceModal(5)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                        alt="Roturación con Subesca">
                 </div>
+                <div class="service-info">
+                    <span class="tag">Preparación</span>
+                    <h3>Roturación con Subesca</h3>
+                    <p>Mejora la estructura interna del suelo y favorece absorción de agua y nutrientes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Preparación eficiente</li>
+                        <li><i class="fas fa-check"></i> Mayor infiltración</li>
+                        <li><i class="fas fa-check"></i> Suelo más fértil</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(5); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
 
-                <!-- Servicio 9 -->
-                 <div class="service-card reveal" data-id="9" onclick="openServiceModal(9)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Control de Plagas">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparacion</span>
-                        <h3>Roturación con Arado de Subsuelo</h3>
-                        <p>Labranza profunda para mejorar aireación y drenaje del suelo.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Descompactación profunda del suelo</li>
-                            <li><i class="fas fa-check"></i> Trabajo hasta 60 cm de profundidad</li>
-                            <li><i class="fas fa-check"></i> Mejora drenaje y aireación</li>
-                            <li><i class="fas fa-check"></i> Uso de tractor categoría 6 (200-290 HP)</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(9); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 6 -->
+            <div class="service-card reveal" data-id="6" onclick="openServiceModal(6)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Escarificada">
                 </div>
+                <div class="service-info">
+                    <span class="tag">Preparación</span>
+                    <h3>Escarificada</h3>
+                    <p>Afina la superficie del terreno y rompe compactaciones superficiales para mejor siembra.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Reducción de terrones</li>
+                        <li><i class="fas fa-check"></i> Profundidad controlada</li>
+                        <li><i class="fas fa-check"></i> Mejora aireación superficial</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(6); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
 
-                <!-- Servicio 10 -->
-                <div class="service-card reveal" data-id="10" onclick="openServiceModal(10)">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
-                            alt="Encalle o Despaje">
-                    </div>
-                    <div class="service-info">
-                        <span class="tag">Preparación</span>
-                        <h3>Encalle o Despaje</h3>
-                        <p>Organización de residuos vegetales en calles definidas para optimizar labores agrícolas.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Despajadora tipo Lelly</li>
-                            <li><i class="fas fa-check"></i> Formación de calles 2x1 o 4x1</li>
-                        </ul>
-                        <button class="btn-add-large" onclick="addToQuote(10); event.stopPropagation();">
-                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
-                        </button>
-                    </div>
+            <!-- SERVICIO 7 -->
+            <div class="service-card reveal" data-id="7" onclick="openServiceModal(7)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80"
+                        alt="Cultivo aporque con pala">
                 </div>
+                <div class="service-info">
+                    <span class="tag">Manejo de Cultivo</span>
+                    <h3>Cultivo aporque con pala</h3>
+                    <p>Aplica técnica de aporque para favorecer el crecimiento de raíces y retención de humedad.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Protección radicular</li>
+                        <li><i class="fas fa-check"></i> Mejor absorción de nutrientes</li>
+                        <li><i class="fas fa-check"></i> Optimiza siembra</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(7); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
+
+            <!-- SERVICIO 8 -->
+            <div class="service-card reveal" data-id="8" onclick="openServiceModal(8)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                        alt="Aporque para control de maleza">
+                </div>
+                <div class="service-info">
+                    <span class="tag">Manejo de Cultivo</span>
+                    <h3>Aporque para control de maleza</h3>
+                    <p>Control de maleza y aireación del suelo alrededor del cultivo con aporque especializado.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Eliminación de maleza</li>
+                        <li><i class="fas fa-check"></i> Mejora aireación del suelo</li>
+                        <li><i class="fas fa-check"></i> Protección del cultivo</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(8); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
+
+            <!-- SERVICIO 9 -->
+            <div class="service-card reveal" data-id="9" onclick="openServiceModal(9)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Abono con pala">
+                </div>
+                <div class="service-info">
+                    <span class="tag">Fertilización</span>
+                    <h3>Abono con pala</h3>
+                    <p>Aplicación manual de fertilizantes para asegurar nutrición equilibrada del cultivo.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Dosificación precisa</li>
+                        <li><i class="fas fa-check"></i> Mejora fertilidad del suelo</li>
+                        <li><i class="fas fa-check"></i> Aplicación uniforme</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(9); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
+
+            <!-- SERVICIO 10 -->
+            <div class="service-card reveal" data-id="10" onclick="openServiceModal(10)">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+                        alt="Reconstrucción de Acequías">
+                </div>
+                <div class="service-info">
+                    <span class="tag">Obras de Drenaje</span>
+                    <h3>Reconstrucción de Acequías</h3>
+                    <p>Reparación y reconstrucción de acequías para un mejor manejo de agua en el terreno agrícola.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Mejor control hídrico</li>
+                        <li><i class="fas fa-check"></i> Prevención de erosión</li>
+                        <li><i class="fas fa-check"></i> Canalización eficiente del agua</li>
+                    </ul>
+                    <button class="btn-add-large" onclick="addToQuote(10); event.stopPropagation();">
+                        <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                    </button>
+                </div>
+            </div>
+
             </div>
         </div>
     </section>
