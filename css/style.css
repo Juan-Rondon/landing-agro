@@ -801,9 +801,10 @@ footer {
 .slider-item video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /*<- se puede cambiar por "contain" si es necesario */
     /* Esto asegura que ocupe todo el espacio */
     display: block;
+    background-color: #000;
 }
 
 .slider-btn {
