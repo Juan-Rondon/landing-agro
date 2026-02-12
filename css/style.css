@@ -1499,3 +1499,117 @@ footer {
 .btn-clear:hover i{
     transform: rotate(-10deg) scale(1.1);
 }
+
+.navbar{
+    flex-wrap: wrap;
+}
+
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(15px, 3vw, 50px);
+    justify-content: flex-end;
+}
+
+.nav-links a{
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    white-space: nowrap;
+}
+
+/* Tablets */
+@media (max-width: 1024px){
+
+    .container{
+        padding: 0 40px;
+    }
+
+    .logo img{
+        max-height: 90px;
+    }
+
+    .nav-links{
+        gap: 25px;
+    }
+
+}
+
+/* Móvil */
+@media (max-width: 768px){
+
+    .navbar{
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .logo img{
+        max-height: 70px;
+    }
+
+    .logo-text{
+        font-size: 1.1rem;
+    }
+
+    .nav-links{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 18px;
+    }
+
+    .nav-links a{
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
+    }
+
+}
+
+html {
+    font-size: clamp(16.2px, 1vw, 18px);
+}
+
+/* Títulos principales */
+h1 {
+    font-size: clamp(1.8rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+
+/* Texto general */
+p {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+}
+
+/* Botones */
+.btn-hero,
+.btn-add-large,
+.btn-whatsapp {
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+@media (max-width: 480px){
+
+    h1{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 1.1rem;
+    }
+
+    p{
+        font-size: 0.95rem;
+    }
+
+}
