@@ -873,7 +873,7 @@ footer {
 }
 
 /* Header del Modal (Estilo Perfil) */
-.info-  header {
+.info-user-header {
     display: flex;
     align-items: center;
     padding: 14px 16px;
