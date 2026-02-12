@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAFAVIANA | Soluciones Agrícolas de Élite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/canvas.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="/assets/img/favicon.jpeg" alt="">
+                    <a>La Faviana</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#cotizacion">Cotización</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Impulsa la Productividad de tu Campo</h1>
+            <p>Tecnología avanzada y servicios profesionales de élite diseñados para llevar tu cosecha al siguiente
+                nivel.</p>
+            <div class="hero-btns">
+                <a href="#servicios" class="btn-hero">
+                    Explorar Servicios <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cómo Funciona (Paso a Paso) -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>¿Cómo solicitar su presupuesto?</h2>
+            <div class="steps-grid">
+                <div class="step-item reveal">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-hand-pointer"></i>
+                    <h3>Elija el servicio</h3>
+                    <p>Busque en nuestra lista lo que su campo necesita y pulse el botón verde de "Añadir".</p>
+                </div>
+                <div class="step-item reveal">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-list-check"></i>
+                    <h3>Revise su lista</h3>
+                    <p>Vea el resumen al final de la página con todos los servicios seleccionados.</p>
+                </div>
+                <div class="step-item reveal">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-paper-plane"></i>
+                    <h3>Envíe sus datos</h3>
+                    <p>Complete sus datos y pulse "Enviar por WhatsApp" para hablar con un asesor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <h3>500+</h3>
+                    <p>Clientes Satisfechos</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3>15k+</h3>
+                    <p>Hectáreas Gestionadas</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3>10+</h3>
+                    <p>Años de Experiencia</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3>24/7</h3>
+                    <p>Soporte Especializado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2>Nuestros Servicios Agrícolas</h2>
+            <p class="section-subtitle">Selecciona los servicios que necesitas para tu cotización</p>
+
+            <div class="services-grid">
+                <!-- Servicio 1 -->
+                <div class="service-card reveal" data-id="1" onclick="openServiceModal(1)">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Preparación de Terreno">
+                    </div>
+                    <div class="service-info">
+                        <span class="tag">Maquinaria</span>
+                        <h3>Preparación de Terreno</h3>
+                        <p>Dejamos su tierra lista para sembrar. Incluye arado profundo y nivelación con GPS para que el
+                            agua llegue a todas partes.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Arado de precisión</li>
+                            <li><i class="fas fa-check"></i> Nivelación de suelos</li>
+                        </ul>
+                        <button class="btn-add-large" onclick="addToQuote(1); event.stopPropagation();">
+                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card reveal" data-id="2" onclick="openServiceModal(2)">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Siembra">
+                    </div>
+                    <div class="service-info">
+                        <span class="tag">Plantación</span>
+                        <h3>Siembra y Plantación</h3>
+                        <p>Plantamos sus semillas de forma uniforme. Aseguramos que cada planta tenga el espacio y
+                            profundidad necesaria para crecer fuerte.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Sembrado mecanizado</li>
+                            <li><i class="fas fa-check"></i> Máxima germinación</li>
+                        </ul>
+                        <button class="btn-add-large" onclick="addToQuote(2); event.stopPropagation();">
+                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card reveal" data-id="3" onclick="openServiceModal(3)">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Riego">
+                    </div>
+                    <div class="service-info">
+                        <span class="tag">Instalación</span>
+                        <h3>Sistemas de Riego</h3>
+                        <p>No desperdicie ni una gota de agua. Instalamos sistemas automáticos que riegan justo lo
+                            necesario, ahorrando dinero y esfuerzo.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Riego por goteo</li>
+                            <li><i class="fas fa-check"></i> Ahorro de agua garantizado</li>
+                        </ul>
+                        <button class="btn-add-large" onclick="addToQuote(3); event.stopPropagation();">
+                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card reveal" data-id="4" onclick="openServiceModal(4)">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Fertilización">
+                    </div>
+                    <div class="service-info">
+                        <span class="tag">Suelos</span>
+                        <h3>Fertilización y Abono</h3>
+                        <p>Alimentamos su cultivo con lo que realmente necesita. Analizamos la tierra y aplicamos el
+                            abono justo para que su cosecha sea abundante.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Nutrición balanceada</li>
+                            <li><i class="fas fa-check"></i> Mayor vigor en la planta</li>
+                        </ul>
+                        <button class="btn-add-large" onclick="addToQuote(4); event.stopPropagation();">
+                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="service-card reveal" data-id="5" onclick="openServiceModal(5)">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1530513511394-87779d7bc7d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Cosecha">
+                    </div>
+                    <div class="service-info">
+                        <span class="tag">Maquinaria</span>
+                        <h3>Cosecha Tecnificada</h3>
+                        <p>Recogemos su producción rápido y sin maltratar el fruto. Nuestra maquinaria moderna evita
+                            pérdidas y asegura que el producto llegue sano.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Cosecha sin daños</li>
+                            <li><i class="fas fa-check"></i> Ahorro de tiempo</li>
+                        </ul>
+                        <button class="btn-add-large" onclick="addToQuote(5); event.stopPropagation();">
+                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="service-card reveal" data-id="6" onclick="openServiceModal(6)">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Control de Plagas">
+                    </div>
+                    <div class="service-info">
+                        <span class="tag">Fumigación</span>
+                        <h3>Control de Plagas</h3>
+                        <p>Protegemos su inversión de las plagas. Usamos tecnología de drones para fumigar solo donde
+                            hace falta, cuidando su salud y la de su campo.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Fumigación con drones</li>
+                            <li><i class="fas fa-check"></i> Menos químicos dañinos</li>
+                        </ul>
+                        <button class="btn-add-large" onclick="addToQuote(6); event.stopPropagation();">
+                            <i class="fas fa-plus-circle"></i> Añadir a mi lista
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ejemplos de Resultados (Antes y Después) -->
+    <section class="results-examples">
+        <div class="container">
+            <h2>Resultados que Hablan por Sí Solos</h2>
+            <p class="section-subtitle">Vea el cambio real en los campos de nuestros clientes tras aplicar nuestra
+                tecnología y servicios.</p>
+
+            <div class="results-grid">
+                <!-- Ejemplo 1 -->
+                <div class="result-card reveal">
+                    <div class="result-image">
+                        <img src="assets/img/antes_despues_campo_1770163806135.png" alt="Transformación de campo">
+                        <div class="result-badge">Transformación Real</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>Recuperación de Tierras</h3>
+                        <p>Pasamos de suelos áridos y descuidados a campos de alta producción en una sola temporada.
+                            Nuestra tecnología de nivelación hace la diferencia.</p>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2 -->
+                <div class="result-card reveal">
+                    <div class="result-image">
+                        <img src="assets/img/cosecha_exitosa_1770163818983.png" alt="Cosecha exitosa">
+                        <div class="result-badge">Éxito Garantizado</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>Cosechas de Exportación</h3>
+                        <p>Mejoramos el tamaño y la salud de los frutos, logrando mejores precios para el productor.
+                            Calidad que se nota a simple vista.</p>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 3 -->
+                <div class="result-card reveal">
+                    <div class="result-image">
+                        <img src="assets/img/maquinaria_trabajando_1770163832231.png" alt="Tecnología en el campo">
+                        <div class="result-badge">Tecnología de Punta</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>Eficiencia Mecanizada</h3>
+                        <p>Nuestra maquinaria de última generación reduce el tiempo de trabajo hasta en un 50%,
+                            permitiéndole disfrutar más tiempo con su familia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cotización -->
+    <section id="cotizacion" class="quote-section">
+        <div class="container">
+            <h2>Tu Cotización</h2>
+            <p class="section-subtitle">Agrega servicios y completa tus datos para enviar la cotización por WhatsApp</p>
+
+            <div class="quote-container">
+                <div class="quote-summary">
+                    <h3>Servicios Seleccionados</h3>
+                    <div id="quote-items" class="quote-items">
+                        <p class="empty-quote">No hay servicios agregados. Selecciona servicios de la lista.</p>
+                    </div>
+                    <div class="quote-total">
+                        <p>Total Servicios: <span id="total-items" class="total-count">0</span></p>
+                        <button onclick="clearQuote()" class="btn-clear" title="Vaciar cotización">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quote-form">
+                    <h3>Datos para la Cotización</h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nombre Completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Ej: +51 987 654 321">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="Ej: juan@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Ubicación del Terreno *</label>
+                            <input type="text" id="location" name="location" required
+                                placeholder="Ej: Valle de Santa, Lima">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area"><i class="fas fa-ruler-combined"></i> Área del Terreno (hectáreas)</label>
+                            <input type="number" id="area" name="area" min="0" step="0.1" placeholder="Ej: 5.5">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Mensaje Adicional</label>
+                            <textarea id="message" name="message" rows="3"
+                                placeholder="Detalles adicionales sobre tu requerimiento..."></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" onclick="sendWhatsAppQuote()" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                            </button>
+                            <p class="form-note">* Los campos marcados con asterisco son obligatorios</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3><i class="fas fa-tractor"></i> LAFAVIANA</h3>
+                    <p>Soluciones agrícolas integrales para mejorar la productividad de tu campo.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +57 301 3471279</p>
+                        <p><i class="fas fa-envelope"></i> agricolalafavianasas@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Calle 26A #10 -  40 Jamundi, Valle</p>
+                    </div>
+                </div>
+
+
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 LAFAVIANA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para confirmación -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>¡Cotización Lista!</h3>
+            <p id="modalMessage">Se abrirá WhatsApp con tu cotización. Verifica la información antes de enviar.</p>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="btn-cancel">Cancelar</button>
+                <button onclick="proceedToWhatsApp()" class="btn-confirm">Abrir WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ayuda Flotante WhatsApp -->
+    <a href="https://wa.me/+573013471279" class="whatsapp-float" target="_blank">
+        <div class="float-content">
+            <span class="float-text">¿Necesita ayuda?</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </a>
+
+    <!-- Modal de Detalles del Servicio -->
+    <div id="serviceDetailsModal" class="modal service-details-modal">
+        <div class="modal-content details-container">
+            <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+
+            <div class="details-layout">
+                <!-- Mitad Izquierda: Slider -->
+                <div class="details-media">
+                    <div class="slider-wrapper">
+                        <div id="serviceSlider" class="slider-track">
+                            <!-- Imágenes y video se cargarán dinámicamente -->
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+                    </div>
+                    <div id="sliderDots" class="slider-dots"></div>
+                </div>
+
+                <!-- Mitad Derecha: Info Estilo Social -->
+                <div class="details-info-box">
+                    <div class="info-user-header">
+                        <div class="user-avatar">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <div class="user-meta">
+                            <span class="user-name">LaFaviana</span>
+                            <span id="detailTag" class="tag-compact">Categoría</span>
+                        </div>
+                    </div>
+
+                    <div class="info-scroll-content">
+                        <h2 id="detailTitle">Título del Servicio</h2>
+                        <p id="detailDescription">Descripción detallada del servicio.</p>
+
+                        <div class="benefits-section">
+                            <h4>Beneficios Clave</h4>
+                            <ul id="detailFeatures" class="social-benefits-list">
+                                <!-- Características dinámicas -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-social-footer">
+                        <div class="cta-container">
+                            <button id="detailAddBtn" class="btn-instagram-style">
+                                <i class="fas fa-cart-plus"></i> Cotizar Servicio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
