@@ -303,6 +303,12 @@ function mostrarModal() {
     }
 
     modal.style.display = 'flex';
+
+    // Pequeño delay para activar animación
+    setTimeout(() => {
+        modal.classList.add('modal-active');
+    }, 10);
+
     modalAbierto = true;
     document.body.style.overflow = 'hidden';
 }
@@ -310,7 +316,13 @@ function mostrarModal() {
 // Cerrar modal
 function closeModal() {
     const modal = document.getElementById('confirmationModal');
-    modal.style.display = 'none';
+
+    modal.classList.remove('modal-active');
+
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+
     modalAbierto = false;
     document.body.style.overflow = 'auto';
 }
@@ -404,22 +416,31 @@ function updateSlider() {
 // Proceder a WhatsApp
 function proceedToWhatsApp() {
     const mensaje = prepararMensajeWhatsApp();
-    const telefonoEmpresa = '+573161297288'; // Reemplazar con número real
+    const telefonoEmpresa = '573161297288'; // SIN + para wa.me
     const urlWhatsApp = `https://wa.me/${telefonoEmpresa}?text=${mensaje}`;
 
-    // Limpiar cotización después de enviar
-    cotizacion = [];
-    localStorage.removeItem('agroCotizacion');
-    actualizarCotizacion();
+    // Animación antes de cerrar
+    const confirmBtn = document.querySelector('#confirmationModal .btn-confirm');
+    confirmBtn.innerHTML = '<i class="fas fa-check"></i> Abriendo...';
+    confirmBtn.style.opacity = "0.8";
+    confirmBtn.disabled = true;
 
-    // Cerrar modal y abrir WhatsApp
-    closeModal();
-    window.open(urlWhatsApp, '_blank');
-
-    // Mostrar confirmación
     setTimeout(() => {
-        mostrarNotificacion('¡Cotización enviada con éxito!', 'success');
-    }, 1000);
+
+        // Limpiar cotización
+        cotizacion = [];
+        localStorage.removeItem('agroCotizacion');
+        actualizarCotizacion();
+
+        closeModal();
+
+        window.open(urlWhatsApp, '_blank');
+
+        setTimeout(() => {
+            mostrarNotificacion('¡Cotización enviada con éxito!', 'success');
+        }, 500);
+
+    }, 800);
 }
 
 // Función principal para enviar cotización
