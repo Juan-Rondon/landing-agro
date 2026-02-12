@@ -1,102 +1,164 @@
 // Base de datos de servicios (simulada)
 const servicios = {
-    1: { id: 1, nombre: "Preparación de Terreno", descripcion: "Arado, rastreado y nivelación de terrenos" },
-    2: { id: 2, nombre: "Siembra y Plantación", descripcion: "Servicios de siembra mecanizada y manual" },
-    3: { id: 3, nombre: "Sistemas de Riego", descripcion: "Instalación y mantenimiento de sistemas de riego" },
-    4: { id: 4, nombre: "Fertilización y Abono", descripcion: "Aplicación de fertilizantes y enmiendas" },
-    5: { id: 5, nombre: "Cosecha Mecanizada", descripcion: "Servicios de cosecha con maquinaria especializada" },
-    6: { id: 6, nombre: "Control de Plagas", descripcion: "Fumigación y control integrado de plagas" }
+    1: { id: 1, nombre: "Preparación de Terrenos con Maquinaria Pesada", descripcion: "Adecuación integral del terreno para todo tipo de cultivos utilizando maquinaria agrícola especializada de alto rendimiento." },
+    2: { id: 2, nombre: "Encalle o Despaje", descripcion: "Organización y retiro técnico de residuos vegetales formando calles estratégicas para mejorar el manejo del cultivo." },
+    3: { id: 3, nombre: "Roturación con Subsuelo", descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar aireación, drenaje y desarrollo radicular." },
+    4: { id: 4, nombre: "Roturación con Subsuelo Triple", descripcion: "Labranza profunda con implemento de tres brazos que permite mayor cobertura y eficiencia por hectárea." },
+    5: { id: 5, nombre: "Roturación con Subesca", descripcion: "Intervención mecánica que mejora la estructura del suelo y favorece la absorción de agua y nutrientes." },
+    6: { id: 6, nombre: "Rastroarado del Terreno", descripcion: "Labranza profunda posterior a la subsolada que reduce terrones, mejora la estructura del suelo y optimiza la preparación para la siembra." },
+    7: { id: 7, nombre: "Subsolado del Terreno", descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar la aireación, el drenaje y el desarrollo radicular del cultivo." },
+    8: { id: 8, nombre: "Subsolado Técnico y Evaluado", descripcion: "Labor especializada con arado de subsuelo que incluye planificación de dirección, señalización del terreno y evaluación técnica de calidad." },
+    9: { id: 9, nombre: "Roturación con Arado de Subsuelo", descripcion: "Labranza profunda que descompacta el suelo hasta 60 cm, mejorando la aireación y el desarrollo radicular del cultivo." },
+    10: { id: 10, nombre: "Encalle o Despaje", descripcion: "Recolección y organización de residuos vegetales en calles definidas (2x1 o 4x1), facilitando las labores posteriores del cultivo y mejorando el orden del terreno." }
 };
+
 
 // Datos extendidos para el Modal de Detalles
 const serviciosDetalles = {
     1: {
-        tag: "Maquinaria",
-        titulo: "Preparación de Terreno",
-        descripcion: "Nuestro servicio de preparación de suelo utiliza maquinaria pesada equipada con GPS para garantizar una nivelación perfecta. Un terreno bien nivelado asegura que el agua de riego se distribuya uniformemente, evitando charcos y zonas secas.",
-        caracteristicas: ["Arado profundo hasta 40cm", "Nivelación con GPS de precisión", "Descompactación de suelos", "Eliminación de maleza raíz"],
+        tag: "Preparación",
+        titulo: "Preparación de Terrenos con Maquinaria Pesada",
+        descripcion: "Adecuación integral del terreno para todo tipo de cultivos utilizando maquinaria agrícola especializada de alto rendimiento.",
+        caracteristicas: [
+            "Uso de maquinaria pesada",
+            "Nivelación y acondicionamiento",
+            "Base óptima para siembra"
+        ],
         media: [
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1594498308644-43285094f064?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'video', url: 'https://www.w3schools.com/html/mov_bbb.mp4' }
+            { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" }
         ]
     },
+
     2: {
-        tag: "Plantación",
-        titulo: "Siembra y Plantación",
-        descripcion: "Utilizamos sembradoras neumáticas de última generación que colocan la semilla a la profundidad exacta y a la distancia óptima entre plantas. Esto maximiza la tasa de germinación y el aprovechamiento de nutrientes de cada planta.",
-        caracteristicas: ["Siembra de alta precisión", "Control de densidad de semillas", "Fertilización localizada en siembra", "Máxima eficiencia en germinación"],
+        tag: "Preparación",
+        titulo: "Encalle o Despaje",
+        descripcion: "Organización y retiro técnico de residuos vegetales formando calles estratégicas para mejorar el manejo del cultivo.",
+        caracteristicas: [
+            "Formación de calles 2x1 o 4x1",
+            "Uso de despajadora tipo Lelly",
+            "Mejor movilidad en el lote"
+        ],
         media: [
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1595053809633-ce2562be3627?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'video', url: 'https://www.w3schools.com/html/movie.mp4' }
+            { tipo: "img", url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" }
         ]
     },
+
     3: {
-        tag: "Instalación",
-        titulo: "Sistemas de Riego",
-        descripcion: "Diseñamos e instalamos sistemas de riego inteligente por goteo o aspersión. Nuestros sistemas incluyen sensores de humedad en tierra que activan el riego solo cuando es necesario, reduciendo el consumo de agua hasta en un 40%.",
-        caracteristicas: ["Riego automatizado", "Sensores de humedad IoT", "Diseño hidráulico eficiente", "Mantenimiento preventivo anual"],
+        tag: "Preparación",
+        titulo: "Roturación con Subsuelo",
+        descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar aireación, drenaje y desarrollo radicular.",
+        caracteristicas: [
+            "Trabajo hasta 60 cm",
+            "Mejora infiltración de agua",
+            "Uso de tractor categoría 6"
+        ],
         media: [
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1463123081488-729f3aaba306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'video', url: 'https://www.w3schools.com/html/mov_bbb.mp4' }
+            { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
         ]
     },
+
     4: {
-        tag: "Suelos",
-        titulo: "Fertilización y Abono",
-        descripcion: "No adivinamos qué nutrientes le faltan a su tierra. Realizamos análisis previos y aplicamos mezclas personalizadas de abono orgánico y mineral utilizando tecnología de tasa variable para una nutrición perfecta.",
-        caracteristicas: ["Análisis de suelo incluido", "Abono orgánico certificado", "Aplicación mecanizada", "Aumento de vigor foliar"],
+        tag: "Preparación",
+        titulo: "Roturación con Subsuelo Triple",
+        descripcion: "Labranza profunda con implemento de tres brazos que permite mayor cobertura y eficiencia por hectárea.",
+        caracteristicas: [
+            "Implemento triple brazo",
+            "Mayor cobertura de terreno",
+            "Fractura uniforme del suelo"
+        ],
         media: [
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1628352081506-83c43143ed6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1505235687559-28b5f54645b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'video', url: 'https://www.w3schools.com/html/movie.mp4' }
+            { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
         ]
     },
+
     5: {
-        tag: "Maquinaria",
-        titulo: "Cosecha Tecnificada",
-        descripcion: "Nuestro equipo de cosecha cuenta con cabezales suaves que minimizan el daño mecánico al fruto. La velocidad de trabajo permite recolectar grandes hectáreas en tiempo récord para mantener la frescura del producto.",
-        caracteristicas: ["Velocidad de cosecha récord", "Cero pérdida por grano", "Transporte logístico incluido", "Operadores expertos"],
+        tag: "Preparación",
+        titulo: "Roturación con Subesca",
+        descripcion: "Intervención mecánica que mejora la estructura del suelo y favorece la absorción de agua y nutrientes.",
+        caracteristicas: [
+            "Mejora estructura del suelo",
+            "Mayor infiltración de agua",
+            "Preparación eficiente para siembra"
+        ],
         media: [
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1530513511394-87779d7bc7d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1594488755677-83c92131ea5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1502472991706-0ad111b51832?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'video', url: 'https://www.w3schools.com/html/mov_bbb.mp4' }
+            { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
         ]
     },
+
     6: {
-        tag: "Fumigación",
-        titulo: "Control de Plagas",
-        descripcion: "Incorporamos drones de aspersión DJI Agras que pueden cubrir áreas de difícil acceso con precisión milimétrica. Esto reduce el uso de químicos hasta en un 30% y evita que el operario tenga contacto directo con los fitosanitarios.",
-        caracteristicas: ["Fumigación con Drones", "Mapas de calor de plagas", "Bio-pesticidas selectivos", "Seguimiento satelital"],
+        tag: "Suelos",
+        titulo: "Rastroarado del Terreno",
+        descripcion: "Labranza profunda posterior a la subsolada que reduce terrones, mejora la estructura del suelo y optimiza la preparación para la siembra.",
+        caracteristicas: [
+            "Reducción de terrones grandes",
+            "Profundidad de 30 a 40 cm",
+            "Mejora contacto semilla-suelo",
+            "Trabajo perpendicular a surcos (90°)"
+        ],
         media: [
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1595053809633-ce2562be3627?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1589367948553-c98c886bf671?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'img', url: 'https://images.unsplash.com/photo-1628352081506-83c43143ed6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' },
-            { tipo: 'video', url: 'https://www.w3schools.com/html/movie.mp4' }
+            { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" }
+        ]
+    },
+
+    7: {
+        tag: "Preparación de Suelos",
+        titulo: "Subsolado del Terreno",
+        descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar la aireación, el drenaje y el desarrollo radicular del cultivo.",
+        caracteristicas: [
+            "Roturación hasta 60 cm",
+            "Mejora flujo de agua y aire",
+            "Uso de arado de subsuelo",
+            "Tractor categoría 6 (200-290 HP)"
+        ],
+        media: [
+            { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80" }
+        ]
+    },
+
+    8: {
+        tag: "Suelos",
+        titulo: "Subsolado Técnico y Evaluado",
+        descripcion: "Labor especializada con arado de subsuelo que incluye planificación de dirección, señalización del terreno y evaluación técnica de calidad.",
+        caracteristicas: [
+            "Dirección alineada al surcado",
+            "Señalización del terreno",
+            "Evaluación técnica (FORCTN2)",
+            "Control de calidad de preparación"
+        ],
+        media: [
+            { tipo: "img", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" }
+        ]
+    },
+
+    9: {
+        tag: "Preparacion",
+        titulo: "Roturación con Arado de Subsuelo",
+        descripcion: "Labranza profunda que descompacta el suelo hasta 60 cm, mejorando la aireación y el desarrollo radicular del cultivo.",
+        caracteristicas: [
+            "Descompactación profunda del suelo",
+            "Trabajo hasta 60 cm de profundidad",
+            "Mejora drenaje y aireación",
+            "Uso de tractor categoría 6 (200-290 HP)"
+        ],
+        media: [
+            { tipo: "img", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" }
+        ]
+    },
+
+    10: {
+        tag: "Preparación",
+        titulo: "Encalle o Despaje",
+        descripcion: "Recolección y organización de residuos vegetales en calles definidas (2x1 o 4x1), facilitando las labores posteriores del cultivo y mejorando el orden del terreno.",
+        caracteristicas: [
+            "Despajadora tipo Lelly",
+            "Formación de calles 2x1 o 4x1"
+        ],
+        media: [
+            { tipo: "img", url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" }
         ]
     }
+
 };
-
-
 
 // Variables globales
 let cotizacion = [];
@@ -111,8 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cotizacion = JSON.parse(savedQuote);
         actualizarCotizacion();
     }
-
-
 
     // Lógica para animaciones de revelado al hacer scroll
     const observerOptions = {
@@ -420,7 +480,7 @@ function updateSlider() {
 // Proceder a WhatsApp
 function proceedToWhatsApp() {
     const mensaje = prepararMensajeWhatsApp();
-    const telefonoEmpresa = '+573013471279'; // Reemplazar con número real
+    const telefonoEmpresa = '573161297288'; // SIN + para wa.me
     const urlWhatsApp = `https://wa.me/${telefonoEmpresa}?text=${mensaje}`;
 
     // Animación antes de cerrar

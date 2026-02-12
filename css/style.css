@@ -92,6 +92,7 @@ header.scrolled {
 .logo {
     display: flex;
     align-items: center;
+    gap: 0;
     height: 100%;
     font-size: 1.5rem;
     font-weight: 800;
@@ -107,13 +108,18 @@ header.scrolled .logo {
 .logo img {
     max-height: 120px;
     width: auto;
+    margin: 0;
+    padding: 0;
     display: block;
-    margin-top: 15px;
 }
 
-.logo i {
-    font-family: inherit;
+.logo-text {
+    margin-left: -35px;
+    padding: 0;
+    line-height: 0.9;
+    display: block;
 }
+
 
 .nav-links {
     display: flex;
@@ -654,13 +660,36 @@ footer {
     margin-bottom: 60px;
 }
 
-.footer-info h3 {
-    font-size: 2rem;
-    margin-bottom: 24px;
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.footer-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    margin-bottom: 14px;
+    position: relative;
+    margin-left: -40px;
 }
+
+.footer-brand img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo-text {
+    position: absolute;
+    left: 120px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+}
+
 
 .footer-links h4 {
     font-size: 1.2rem;
@@ -844,7 +873,7 @@ footer {
 }
 
 /* Header del Modal (Estilo Perfil) */
-.info-user-header {
+.info-  header {
     display: flex;
     align-items: center;
     padding: 14px 16px;
@@ -862,6 +891,12 @@ footer {
     justify-content: center;
     color: white;
     font-size: 0.8rem;
+}
+
+.logo-avatar {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
 }
 
 .user-meta {
