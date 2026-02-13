@@ -8,6 +8,28 @@ const servicios = {
     6: { id: 6, nombre: "Control de Plagas", descripcion: "Fumigación y control integrado de plagas" }
 };
 
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    
+    navLinks.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
+}
+
+// Close mobile menu when clicking on a link
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const navLinksContainer = document.querySelector('.nav-links');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            navLinksContainer.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        });
+    });
+});
+
 // Datos extendidos para el Modal de Detalles
 const serviciosDetalles = {
     1: {
