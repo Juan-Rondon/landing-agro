@@ -155,12 +155,15 @@ header.scrolled .nav-links a {
     width: 100%;
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle - OCULTO EN ESCRITORIO */
 .mobile-menu-toggle {
-    display: none;
+    display: none !important; /* Completamente oculto en escritorio */
     flex-direction: column;
     cursor: pointer;
     padding: 5px;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 .mobile-menu-toggle span {
@@ -186,6 +189,14 @@ header.scrolled .mobile-menu-toggle span {
 
 .mobile-menu-toggle.active span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Overlay móvil - OCULTO EN ESCRITORIO */
+.mobile-overlay {
+    display: none !important; /* Oculto en escritorio */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Hero Section - Immersive */
@@ -1300,46 +1311,141 @@ footer {
         padding: 0;
     }
     
-    /* Navigation */
+    /* OVERLAY MÓVIL - VISIBLE SOLO EN MÓVIL */
+    .mobile-overlay {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+    /* BOTÓN HAMBURGUESA - VISIBLE SOLO EN MÓVIL */
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        width: 45px !important;
+        height: 45px !important;
+        background: var(--primary) !important;
+        border: 2px solid #fff !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        z-index: 10001 !important;
+        position: fixed !important;
+        top: 15px !important;
+        right: 15px !important;
+        padding: 8px !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+        margin: 0 !important;
     }
-    
-    .navbar {
-        padding: 10px 0;
+
+    .mobile-menu-toggle span {
+        display: block !important;
+        width: 25px !important;
+        height: 3px !important;
+        background-color: #ffffff !important;
+        border-radius: 2px !important;
+        transition: all 0.3s ease !important;
     }
-    
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px) !important;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px) !important;
+    }
+
+    /* MENÚ LATERAL DERECHO - MÓVIL */
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 20px;
-        gap: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        z-index: 1000;
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 0 !important;
+        right: -300px !important; /* Escondido a la derecha */
+        left: auto !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: #ffffff !important;
+        z-index: 9999998 !important;
+        transition: right 0.3s ease-in-out !important;
+        padding: 80px 20px !important;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2) !important;
+        visibility: visible !important;
     }
-    
+
     .nav-links.active {
-        display: flex;
+        right: 0 !important; /* Mostrar desde la derecha */
+        left: auto !important;
+    }
+
+    .nav-links a {
+        display: block !important;
+        padding: 20px !important;
+        color: #333 !important;
+        font-size: 1.3rem !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid #eee !important;
     }
     
+    .nav-links li {
+        width: 100%;
+        list-style: none;
+    }
+
     .nav-links a {
+        display: block;
         color: var(--primary-dark) !important;
-        font-size: 1.1rem;
-        padding: 12px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 18px 20px; /* Más área de clic */
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         width: 100%;
-        text-align: center;
+        text-align: left;
+        text-decoration: none;
+        transition: background 0.2s ease, padding-left 0.2s ease;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .nav-links a:active,
+    .nav-links a:hover {
+        background: rgba(var(--primary-rgb, 76, 175, 80), 0.1);
+        padding-left: 25px;
+        color: var(--primary-color) !important;
     }
 
     .nav-links li:last-child a {
         border-bottom: none;
+    }
+    
+    .mobile-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease, visibility .3s ease;
+        z-index: 1050;
+    }
+    
+    .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+        touch-action: none;
     }
     
     /* Hero */
