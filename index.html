@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <!-- Header y Navegación -->
+    <!-- Header y egación -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -22,15 +22,22 @@
                     <img src="assets/img/favicon.jpeg" alt="Logo">
                     <a class="logo-text">La Faviana</a>
                 </div>
-                <ul class="nav-links">
+
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#cotizacion">Cotización</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu(event)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
+    <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
@@ -78,7 +85,7 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item reveal">
-                    <h3>500+</h3>
+                    <h3>28+</h3>
                     <p>Clientes Satisfechos</p>
                 </div>
                 <div class="stat-item reveal">

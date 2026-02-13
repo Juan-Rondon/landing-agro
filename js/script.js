@@ -13,6 +13,81 @@ const servicios = {
 };
 
 
+// Mobile Menu Toggle Logic
+// document.addEventListener('DOMContentLoaded', function() {
+//     const mobileToggle = document.querySelector('.mobile-menu-toggle');
+//     const navLinks = document.querySelector('.nav-links');
+//     const overlay = document.querySelector('.mobile-overlay');
+
+//     console.log("Sistema de menú iniciado");
+
+//     if (mobileToggle && navLinks) {
+//         mobileToggle.onclick = function(e) {
+//             e.preventDefault();
+//             e.stopPropagation();
+//             console.log("Click en toggle detectado");
+//             navLinks.classList.toggle('active');
+//             mobileToggle.classList.toggle('active');
+//             if (overlay) overlay.classList.toggle('active');
+//         };
+//     }
+
+    // Cerrar al hacer clic en un enlace
+    // const links = document.querySelectorAll('.nav-links a');
+    // links.forEach(link => {
+    //     link.onclick = function() {
+    //         navLinks.classList.remove('active');
+    //         mobileToggle.classList.remove('active');
+    //         if (overlay) overlay.classList.remove('active');
+    //     };
+    // });
+// });
+
+// Mantener funciones globales solo si son necesarias por otros componentes (como el modal)
+function toggleMobileMenu(e) {
+  if (e) {
+    e.preventDefault?.();
+    e.stopPropagation?.();
+  }
+
+  const navLinks = document.getElementById("navLinks");
+  const mobileToggle = document.querySelector(".mobile-menu-toggle");
+  const overlay = document.querySelector(".mobile-overlay");
+
+  if (!navLinks || !mobileToggle) return;
+
+  const isOpen = navLinks.classList.toggle("active");
+
+  // ESTO activa la X (tu CSS ya lo tiene)
+  mobileToggle.classList.toggle("active", isOpen);
+
+  // evita scroll cuando el menú está abierto
+  document.body.classList.toggle("menu-open", isOpen);
+
+  if (overlay) overlay.classList.toggle("active", isOpen);
+}
+
+function closeMobileMenu() {
+  const navLinks = document.getElementById("navLinks");
+  const mobileToggle = document.querySelector(".mobile-menu-toggle");
+  const overlay = document.querySelector(".mobile-overlay");
+
+  navLinks?.classList.remove("active");
+  mobileToggle?.classList.remove("active");
+  document.body.classList.remove("menu-open");
+  overlay?.classList.remove("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // cerrar al tocar cualquier link
+  document.querySelectorAll("#navLinks a").forEach(a => {
+    a.addEventListener("click", closeMobileMenu);
+  });
+
+  // cerrar al tocar el overlay (si existe)
+  const overlay = document.querySelector(".mobile-overlay");
+  overlay?.addEventListener("click", closeMobileMenu);
+});
 // Datos extendidos para el Modal de Detalles
 const serviciosDetalles = {
     1: {
