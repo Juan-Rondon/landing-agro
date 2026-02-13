@@ -478,7 +478,7 @@ function prepararMensajeWhatsApp() {
     };
 
     // Construir mensaje
-    let mensaje = `*NUEVA COTIZACIÓN - AGROSERVICIOS*\n`;
+    let mensaje = `*NUEVA COTIZACIÓN - LAFAVIANA SAS*\n`;
     mensaje += `------------------------------------------\n\n`;
     mensaje += `*DATOS DEL CLIENTE:*\n`;
     mensaje += `- Nombre: ${formData.nombre}\n`;
@@ -500,7 +500,7 @@ function prepararMensajeWhatsApp() {
     mensaje += `------------------------------------------\n\n`;
 
     mensaje += `*MENSAJE ADICIONAL:*\n${formData.mensaje}\n\n`;
-    mensaje += `_Generado desde la página web de AgroServicios_`;
+    mensaje += `_Generado desde la página web de LAFAVIANA SAS_`;
 
     return encodeURIComponent(mensaje);
 }
