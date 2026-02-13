@@ -12,9 +12,7 @@ const servicios = {
     10: { id: 10, nombre: "Encalle o Despaje", descripcion: "Recolección y organización de residuos vegetales en calles definidas (2x1 o 4x1), facilitando las labores posteriores del cultivo y mejorando el orden del terreno." }
 };
 
-<<<<<<< HEAD
 
-=======
 // Mobile Menu Toggle Logic
 document.addEventListener('DOMContentLoaded', function() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
@@ -56,7 +54,6 @@ function closeMobileMenu() {
     document.body.classList.remove('menu-open');
     overlay?.classList.remove('active');
 }
->>>>>>> origin/mejoras
 // Datos extendidos para el Modal de Detalles
 const serviciosDetalles = {
     1: {

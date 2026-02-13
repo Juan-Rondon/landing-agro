@@ -1633,7 +1633,6 @@ footer {
     .float-text {
         font-size: 0.9rem;
     }
-<<<<<<< HEAD
 }
 
 /* ================================
@@ -1973,7 +1972,6 @@ p {
         font-size: 0.95rem;
     }
 
-=======
 
     /* Modal de Detalles Responsivo */
     .details-container {
@@ -2067,5 +2065,4 @@ p {
     .logo i {
         font-size: 1.4rem;
     }
->>>>>>> origin/mejoras
 }

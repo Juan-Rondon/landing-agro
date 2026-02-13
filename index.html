@@ -18,12 +18,6 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <!-- BOTÓN HAMBURGUESA FORZADO -->
-                <button class="mobile-menu-toggle" aria-label="Menu" style="display: flex !important; visibility: visible !important;">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
                 <div class="logo">
                     <img src="assets/img/favicon.jpeg" alt="Logo">
                     <a class="logo-text">La Faviana</a>
@@ -35,10 +29,14 @@
                     <li><a href="#cotizacion">Cotización</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
-    <div class="mobile-overlay"></div>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
