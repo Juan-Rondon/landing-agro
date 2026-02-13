@@ -31,10 +31,10 @@ const serviciosDetalles = {
             'Suelo uniforme para siembra eficiente'
         ],
         media: [
-            { tipo: "img", url: "images/service_1/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_1/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_1/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_1/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_1/imagen_1.png" },
+            { tipo: "img", url: "images/service_1/imagen_2.png" },
+            { tipo: "img", url: "images/service_1/imagen_3.png" },
+            { tipo: "img", url: "images/service_1/imagen_4.png" }
         ]
     },
 
@@ -53,10 +53,10 @@ const serviciosDetalles = {
             'Mejora de condiciones sanitarias del terreno'
         ],
         media: [
-            { tipo: "img", url: "images/service_2/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_2/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_2/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_2/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_2/imagen_1.png" },
+            { tipo: "img", url: "images/service_2/imagen_2.png" },
+            { tipo: "img", url: "images/service_2/imagen_3.png" },
+            { tipo: "img", url: "images/service_2/imagen_4.png" }
         ]
     },
 
@@ -75,10 +75,10 @@ const serviciosDetalles = {
             'Preparación para cultivos exigentes'
         ],
         media: [
-            { tipo: "img", url: "images/service_3/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_3/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_3/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_3/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_3/imagen_1.png" },
+            { tipo: "img", url: "images/service_3/imagen_2.png" },
+            { tipo: "img", url: "images/service_3/imagen_3.png" },
+            { tipo: "img", url: "images/service_3/imagen_4.png" }
         ]
     },
 
@@ -97,10 +97,10 @@ const serviciosDetalles = {
             'Preparación uniforme del lote'
         ],
         media: [
-            { tipo: "img", url: "images/service_4/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_4/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_4/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_4/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_4/imagen_1.png" },
+            { tipo: "img", url: "images/service_4/imagen_2.png" },
+            { tipo: "img", url: "images/service_4/imagen_3.png" },
+            { tipo: "img", url: "images/service_4/imagen_4.png" }
         ]
     },
 
@@ -119,10 +119,10 @@ const serviciosDetalles = {
             'Suelo más fértil y estable'
         ],
         media: [
-            { tipo: "img", url: "images/service_5/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_5/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_5/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_5/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_5/imagen_1.png" },
+            { tipo: "img", url: "images/service_5/imagen_2.png" },
+            { tipo: "img", url: "images/service_5/imagen_3.png" },
+            { tipo: "img", url: "images/service_5/imagen_4.png" }
         ]
     },
 
@@ -141,10 +141,10 @@ const serviciosDetalles = {
             'Optimización de crecimiento inicial'
         ],
         media: [
-            { tipo: "img", url: "images/service_6/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_6/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_6/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_6/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_6/imagen_1.png" },
+            { tipo: "img", url: "images/service_6/imagen_2.png" },
+            { tipo: "img", url: "images/service_6/imagen_3.png" },
+            { tipo: "img", url: "images/service_6/imagen_4.png" }
         ]
     },
 
@@ -162,10 +162,10 @@ const serviciosDetalles = {
             'Optimización del rendimiento del cultivo'
         ],
         media: [
-            { tipo: "img", url: "images/service_7/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_7/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_7/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_7/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_7/imagen_1.png" },
+            { tipo: "img", url: "images/service_7/imagen_2.png" },
+            { tipo: "img", url: "images/service_7/imagen_3.png" },
+            { tipo: "img", url: "images/service_7/imagen_4.png" }
         ]
     },
 
@@ -183,10 +183,10 @@ const serviciosDetalles = {
             'Optimización del crecimiento de plantas'
         ],
         media: [
-            { tipo: "img", url: "images/service_8/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_8/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_8/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_8/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_8/imagen_1.png" },
+            { tipo: "img", url: "images/service_8/imagen_2.png" },
+            { tipo: "img", url: "images/service_8/imagen_3.png" },
+            { tipo: "img", url: "images/service_8/imagen_4.png" }
         ]
     },
 
@@ -204,10 +204,10 @@ const serviciosDetalles = {
             'Optimización de crecimiento del cultivo'
         ],
         media: [
-            { tipo: "img", url: "images/service_9/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_9/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_9/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_9/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_9/imagen_1.png" },
+            { tipo: "img", url: "images/service_9/imagen_2.png" },
+            { tipo: "img", url: "images/service_9/imagen_3.png" },
+            { tipo: "img", url: "images/service_9/imagen_4.png" }
         ]
     },
 
@@ -226,10 +226,10 @@ const serviciosDetalles = {
             'Prolonga vida útil del sistema de riego'
         ],
         media: [
-            { tipo: "img", url: "images/service_10/imagen_1.jpg" },
-            { tipo: "img", url: "images/service_10/imagen_2.jpg" },
-            { tipo: "img", url: "images/service_10/imagen_3.jpg" },
-            { tipo: "img", url: "images/service_10/imagen_4.jpg" }
+            { tipo: "img", url: "images/service_10/imagen_1.png" },
+            { tipo: "img", url: "images/service_10/imagen_2.png" },
+            { tipo: "img", url: "images/service_10/imagen_3.png" },
+            { tipo: "img", url: "images/service_10/imagen_4.png" }
         ]
     }
 
@@ -555,7 +555,7 @@ function updateSlider() {
 // Proceder a WhatsApp
 function proceedToWhatsApp() {
     const mensaje = prepararMensajeWhatsApp();
-    const telefonoEmpresa = '573161297288'; // SIN + para wa.me
+    const telefonoEmpresa = '573013471279'; 
     const urlWhatsApp = `https://wa.me/${telefonoEmpresa}?text=${mensaje}`;
 
     // Animación antes de cerrar
