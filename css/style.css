@@ -1259,7 +1259,7 @@ footer {
 
 .result-image {
     position: relative;
-    aspect-ratio: 16 / 9; /* o la proporción real de tu imagen */
+    aspect-ratio: 14 / 9;
     overflow: hidden;
 }
 
