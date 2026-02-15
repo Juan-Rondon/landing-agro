@@ -1259,7 +1259,8 @@ footer {
 
 .result-image {
     position: relative;
-    height: 350px;
+    aspect-ratio: 16 / 9; /* o la proporción real de tu imagen */
+    overflow: hidden;
 }
 
 .result-image img {
@@ -1267,7 +1268,6 @@ footer {
     height: 100%;
     object-fit: cover;
 }
-
 .result-badge {
     position: absolute;
     top: 25px;

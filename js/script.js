@@ -94,16 +94,17 @@ const serviciosDetalles = {
         tag: "Preparación",
         titulo: "Preparación de Terrenos",
         descripcion: `Nuestro servicio de Preparación de Terrenos está enfocado en optimizar las condiciones físicas del 
-            suelo antes del establecimiento del cultivo. Realizamos nivelación, descompactación y acondicionamiento estructural 
-            para garantizar una base uniforme y estable. Además, evaluamos la composición del suelo y aplicamos técnicas para 
-            mejorar la aireación y drenaje. Esto permite un crecimiento radicular más profundo, facilita el tránsito de maquinaria 
-            y asegura un terreno productivo durante toda la temporada agrícola.`,
+            suelo antes del establecimiento del cultivo. Realizamos descompactación y mejoramiento estructural 
+            para garantizar una base firme y funcional. Además, evaluamos la composición del suelo y aplicamos 
+            técnicas que favorecen la aireación y el drenaje natural. Esto permite un crecimiento radicular más 
+            profundo, facilita el tránsito de maquinaria agrícola y asegura un terreno productivo durante toda 
+            la temporada agrícola.`,
         caracteristicas: [
             'Análisis y evaluación técnica del suelo',
-            'Corrección de desniveles y microrelieves',
-            'Optimización de infiltración y drenaje',
-            'Preparación para maquinaria pesada',
-            'Suelo uniforme para siembra eficiente'
+            'Descompactación estructural profunda',
+            'Mejoramiento de aireación del terreno',
+            'Optimización de infiltración y drenaje natural',
+            'Base firme para tránsito de maquinaria agrícola'
         ],
         media: [
             { tipo: "img", url: "images/service_1/imagen_1.png" },
