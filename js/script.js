@@ -792,3 +792,41 @@ window.addEventListener('load', function () {
         });
     }
 });
+
+// Menu deslizante para mision y visión
+const containerAbout = document.querySelector('.container-about');
+const visionBtn = document.querySelector('.vision-btn');
+const misionBtn = document.querySelector('.mision-btn');
+
+visionBtn.addEventListener('click', () => {
+  containerAbout.classList.add('active');
+});
+
+misionBtn.addEventListener('click', () => {
+  containerAbout.classList.remove('active');
+});
+// ===== MÓVIL FLECHA MISIÓN / VISIÓN =====
+const mobileArrowBtn = document.querySelector('.about-arrow-btn');
+const mobileTitle = document.querySelector('.about-mobile-title');
+const misionBox = document.querySelector('.mision');
+const visionBox = document.querySelector('.vision');
+
+let isVision = false;
+
+mobileArrowBtn.addEventListener('click', () => {
+
+  isVision = !isVision;
+
+  if (isVision) {
+    misionBox.classList.remove('active-content');
+    visionBox.classList.add('active-content');
+    mobileTitle.textContent = "Visión";
+    containerAbout.classList.add('active');
+  } else {
+    visionBox.classList.remove('active-content');
+    misionBox.classList.add('active-content');
+    mobileTitle.textContent = "Misión";
+    containerAbout.classList.remove('active');
+  }
+
+});
