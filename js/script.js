@@ -9,7 +9,8 @@ const servicios = {
     7: { id: 7, nombre: "Subsolado del Terreno", descripcion: "Descompactación profunda del suelo hasta 60 cm para mejorar la aireación, el drenaje y el desarrollo radicular del cultivo." },
     8: { id: 8, nombre: "Subsolado Técnico y Evaluado", descripcion: "Labor especializada con arado de subsuelo que incluye planificación de dirección, señalización del terreno y evaluación técnica de calidad." },
     9: { id: 9, nombre: "Roturación con Arado de Subsuelo", descripcion: "Labranza profunda que descompacta el suelo hasta 60 cm, mejorando la aireación y el desarrollo radicular del cultivo." },
-    10: { id: 10, nombre: "Encalle o Despaje", descripcion: "Recolección y organización de residuos vegetales en calles definidas (2x1 o 4x1), facilitando las labores posteriores del cultivo y mejorando el orden del terreno." }
+    10: { id: 10, nombre: "Encalle o Despaje", descripcion: "Recolección y organización de residuos vegetales en calles definidas (2x1 o 4x1), facilitando las labores posteriores del cultivo y mejorando el orden del terreno." },
+    11: { id: 11, nombre: "Subsuelo Topo", descripcion: "El servicio de Subsuelo Topo está diseñado para realizar una descompactación profunda del suelo sin alterar excesivamente la superficie del terreno." }
 };
 
 
@@ -176,7 +177,7 @@ const serviciosDetalles = {
             { tipo: "img", url: "images/service_4/imagen_1.png" },
             { tipo: "img", url: "images/service_4/imagen_2.png" },
             { tipo: "img", url: "images/service_4/imagen_3.png" },
-            { tipo: "img", url: "images/service_4/imagen_4.png" }
+            // { tipo: "img", url: "images/service_4/imagen_4.png" }
         ]
     },
 
@@ -307,7 +308,34 @@ const serviciosDetalles = {
             { tipo: "img", url: "images/service_10/imagen_3.png" },
             { tipo: "img", url: "images/service_10/imagen_4.png" }
         ]
-    }
+    },
+
+    11: {
+    tag: "Preparación",
+    titulo: "Subsuelo Topo",
+    descripcion: `El servicio de Subsuelo Topo está diseñado para realizar una descompactación profunda del suelo 
+        sin alterar excesivamente la superficie del terreno. Esta técnica permite romper capas endurecidas 
+        que limitan el desarrollo de las raíces y el movimiento del agua en el subsuelo. 
+        Mediante maquinaria especializada se mejora la aireación del suelo y se favorece la infiltración 
+        del agua de lluvia o riego, permitiendo que los cultivos tengan un mejor acceso a nutrientes 
+        y humedad. Este proceso contribuye a aumentar la productividad del terreno y a mantener 
+        condiciones óptimas para el desarrollo saludable de los cultivos.`,
+    
+    caracteristicas: [
+        'Rompimiento de capas compactadas del subsuelo',
+        'Mejora la infiltración y retención de agua',
+        'Favorece el desarrollo profundo de las raíces',
+        'Optimiza la aireación natural del suelo',
+        'Aumenta la productividad y salud del cultivo'
+    ],
+
+    media: [
+        { tipo: "img", url: "images/service_11/imagen_1.png" },
+        { tipo: "img", url: "images/service_11/imagen_2.png" },
+        { tipo: "img", url: "images/service_11/imagen_3.png" },
+        // { tipo: "img", url: "images/service_11/imagen_4.png" }
+    ]
+}
 
 };
 
