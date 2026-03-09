@@ -218,10 +218,10 @@ const serviciosDetalles = {
             'Optimización de crecimiento inicial'
         ],
         media: [
-            { tipo: "img", url: "images/service_6/imagen_1.png" },
+            // { tipo: "img", url: "images/service_6/imagen_1.png" },
             { tipo: "img", url: "images/service_6/imagen_2.png" },
-            { tipo: "img", url: "images/service_6/imagen_3.png" },
-            { tipo: "img", url: "images/service_6/imagen_4.png" }
+            // { tipo: "img", url: "images/service_6/imagen_3.png" },
+            // { tipo: "img", url: "images/service_6/imagen_4.png" }
         ]
     },
 
@@ -270,9 +270,9 @@ const serviciosDetalles = {
     9: {
         tag: "Fertilización",
         titulo: "Abono con pala",
-        descripcion: `El Abono con pala permite aplicar fertilizantes de manera manual asegurando una distribución homogénea y 
-            controlada de nutrientes en el suelo. Esto mejora la fertilidad, potencia el desarrollo radicular y asegura un 
-            crecimiento uniforme de las plantas, aumentando la productividad y calidad del cultivo.`,
+        descripcion: `La aplicación mecanizada de fertilizantes permite distribuir los nutrientes de manera uniforme y eficiente en el suelo. 
+            Esto mejora la fertilidad, fortalece el desarrollo radicular y favorece un crecimiento uniforme de las plantas, 
+            aumentando la productividad y la calidad del cultivo.`,
         caracteristicas: [
             'Distribución homogénea de fertilizante',
             'Mejora de fertilidad del suelo',
