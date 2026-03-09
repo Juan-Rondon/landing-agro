@@ -175,7 +175,7 @@ const serviciosDetalles = {
         ],
         media: [
             { tipo: "img", url: "images/service_4/imagen_1.png" },
-            { tipo: "img", url: "images/service_4/imagen_2.png" },
+            // { tipo: "img", url: "images/service_4/imagen_2.png" },
             { tipo: "img", url: "images/service_4/imagen_3.png" },
             // { tipo: "img", url: "images/service_4/imagen_4.png" }
         ]
@@ -304,7 +304,7 @@ const serviciosDetalles = {
         ],
         media: [
             { tipo: "img", url: "images/service_10/imagen_1.png" },
-            { tipo: "img", url: "images/service_10/imagen_2.png" },
+            // { tipo: "img", url: "images/service_10/imagen_2.png" },
             { tipo: "img", url: "images/service_10/imagen_3.png" },
             { tipo: "img", url: "images/service_10/imagen_4.png" }
         ]
