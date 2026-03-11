@@ -552,6 +552,8 @@ h2 {
     max-width: 400px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    display: flex;            /* 🔥 agregar */
+    flex-direction: column;   /* 🔥 agregar */
 }
 
 .service-card:hover {
@@ -629,6 +631,9 @@ h2 {
 
 .service-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 🔥 importante */
 }
 
 .service-info h3 {
@@ -695,6 +700,8 @@ h2 {
     gap: 10px;
     transition: var(--transition);
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+
+    margin-top: auto; /* empuja el botón hacia abajo */
 }
 
 .btn-add-large i {

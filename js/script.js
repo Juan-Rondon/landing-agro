@@ -116,7 +116,7 @@ const serviciosDetalles = {
     },
 
     2: {
-        tag: "Preparación",
+        tag: "Mantenimiento De Soca",
         titulo: "Encalle o Despaje",
         descripcion: `El servicio de Encalle o Despaje organiza los residuos vegetales y despeja calles técnicas en el terreno, 
             asegurando un paso seguro de maquinaria y facilitando la planificación de labores agrícolas. Además, permite mejorar la 
@@ -138,7 +138,7 @@ const serviciosDetalles = {
     },
 
     3: {
-        tag: "Preparación",
+        tag: "Mantenimiento De Soca",
         titulo: "Roturación con Subsuelo",
         descripcion: `La Roturación con Subsuelo es una labranza profunda que permite romper capas compactadas del terreno que 
             limitan la absorción de agua y nutrientes. Utilizando maquinaria de alta potencia y técnicas especializadas, se mejora 
@@ -160,7 +160,7 @@ const serviciosDetalles = {
     },
 
     4: {
-        tag: "Preparación",
+        tag: "Mantenimiento De Soca",
         titulo: "Roturación con Subsuelo Triple",
         descripcion: `La Roturación con Subsuelo Triple utiliza un implemento de tres brazos que amplía la cobertura y permite 
             una fractura más uniforme del terreno. Esta técnica reduce la compactación, mejora el drenaje y la oxigenación del suelo. 
@@ -182,7 +182,7 @@ const serviciosDetalles = {
     },
 
     5: {
-        tag: "Preparación",
+        tag: "Mantenimiento De Soca",
         titulo: "Roturación con Subesca",
         descripcion: `La Roturación con Subesca actúa en capas estratégicas del terreno para mejorar su estructura física y su 
             capacidad de retención de agua. Esta técnica optimiza la circulación de aire, aumenta la disponibilidad de nutrientes y 
@@ -204,7 +204,7 @@ const serviciosDetalles = {
     },
 
     6: {
-        tag: "Suelos",
+        tag: "Mantenimiento De Soca",
         titulo: "Escarificada",
         descripcion: `La Escarificada afina la superficie del terreno, rompe compactaciones superficiales y mejora la aireación. 
             Esto prepara el terreno para una siembra más precisa y homogénea, permitiendo un desarrollo inicial más fuerte de las 
@@ -218,15 +218,15 @@ const serviciosDetalles = {
             'Optimización de crecimiento inicial'
         ],
         media: [
-            { tipo: "img", url: "images/service_6/imagen_1.png" },
+            // { tipo: "img", url: "images/service_6/imagen_1.png" },
             { tipo: "img", url: "images/service_6/imagen_2.png" },
-            { tipo: "img", url: "images/service_6/imagen_3.png" },
-            { tipo: "img", url: "images/service_6/imagen_4.png" }
+            // { tipo: "img", url: "images/service_6/imagen_3.png" },
+            // { tipo: "img", url: "images/service_6/imagen_4.png" }
         ]
     },
 
     7: {
-        tag: "Manejo de Cultivo",
+        tag: "Mantenimiento De Soca",
         titulo: "Cultivo aporque con pala",
         descripcion: `El Cultivo aporque con pala consiste en amontonar tierra alrededor de la base de la planta para favorecer 
             el desarrollo radicular, retener humedad y proteger la planta de plagas y estrés ambiental. Esto incrementa la absorción 
@@ -247,7 +247,7 @@ const serviciosDetalles = {
     },
 
     8: {
-        tag: "Manejo de Cultivo",
+        tag: "Mantenimiento De Soca",
         titulo: "Aporque para control de maleza",
         descripcion: `El Aporque para control de maleza es una técnica que permite eliminar la maleza alrededor de las plantas 
             mientras se airea el suelo y se mejora su estructura. Esto asegura un desarrollo radicular más eficiente, protege el 
@@ -268,11 +268,11 @@ const serviciosDetalles = {
     },
 
     9: {
-        tag: "Fertilización",
+        tag: "Mantenimiento De Soca",
         titulo: "Abono con pala",
-        descripcion: `El Abono con pala permite aplicar fertilizantes de manera manual asegurando una distribución homogénea y 
-            controlada de nutrientes en el suelo. Esto mejora la fertilidad, potencia el desarrollo radicular y asegura un 
-            crecimiento uniforme de las plantas, aumentando la productividad y calidad del cultivo.`,
+        descripcion: `La aplicación mecanizada de fertilizantes permite distribuir los nutrientes de manera uniforme y eficiente en el suelo. 
+            Esto mejora la fertilidad, fortalece el desarrollo radicular y favorece un crecimiento uniforme de las plantas, 
+            aumentando la productividad y la calidad del cultivo.`,
         caracteristicas: [
             'Distribución homogénea de fertilizante',
             'Mejora de fertilidad del suelo',
@@ -289,7 +289,7 @@ const serviciosDetalles = {
     },
 
     10: {
-        tag: "Obras de Drenaje",
+        tag: "Mantenimiento De Soca",
         titulo: "Reconstrucción de Acequías",
         descripcion: `Nuestro servicio de Reconstrucción de Acequías se centra en reparar, ampliar y mejorar canales de riego, 
             garantizando un flujo eficiente del agua en el terreno agrícola. Esto previene erosión, asegura una distribución uniforme 
@@ -311,7 +311,7 @@ const serviciosDetalles = {
     },
 
     11: {
-    tag: "Preparación",
+    tag: "Mantenimiento De Soca",
     titulo: "Subsuelo Topo",
     descripcion: `El servicio de Subsuelo Topo está diseñado para realizar una descompactación profunda del suelo 
         sin alterar excesivamente la superficie del terreno. Esta técnica permite romper capas endurecidas 
