@@ -1602,6 +1602,40 @@ footer {
     line-height: 1.6;
 }
 
+/* activar modo panel solo cuando haya paneles */
+.result-image:has(.panel){
+    display:flex;
+}
+
+/* panel base */
+.result-image:has(.panel) .panel{
+    flex:1;
+    transition:flex 0.6s ease;
+    overflow:hidden;
+    border-right:3px solid var(--primary); /* línea divisoria */
+}
+
+/* imagen dentro del panel */
+.result-image:has(.panel) .panel img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* contrae todos */
+.result-image:has(.panel):hover .panel{
+    flex:0.7;
+}
+
+/* expande el activo */
+.result-image:has(.panel) .panel:hover{
+    flex:6;
+}
+
+.result-image:has(.panel) .panel:nth-last-child(2){
+    border-right:none;
+}
+
 /* Relleno adicional para secciones que se ven vacías */
 .steps-grid,
 .services-grid,
@@ -1930,32 +1964,32 @@ footer {
         font-size: 1rem;
     }
     
-/* Footer */
-.footer-content {
-    grid-template-columns: 1fr;
-    gap: 35px;
-    text-align: left;
-    padding-left: 20px;   /* 🔥 espacio izquierdo */
-    padding-right: 20px;  /* 🔥 espacio derecho */
-}
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-.footer-info,
-.footer-social,
-.footer-map {
-    align-items: flex-start;
-}
+    .footer-info,
+    .footer-social,
+    .footer-map {
+        align-items: flex-start;
+    }
 
-.footer-brand {
-    justify-content: flex-start;
-}
+    .footer-brand {
+        justify-content: flex-start;
+    }
 
-.social-icons {
-    justify-content: flex-start;
-}
+    .social-icons {
+        justify-content: flex-start;
+    }
 
-.footer-map {
-    transform: translateX(0);
-}
+    .footer-map {
+        transform: translateX(0);
+    }
     
     /* WhatsApp Float */
     .whatsapp-float {
@@ -1967,6 +2001,21 @@ footer {
     .float-text {
         font-size: 0.9rem;
     }
+
+/* quitar comportamiento hover */
+.result-image:has(.panel):hover .panel{
+    flex:1;
+}
+
+/* panel normal */
+.result-image:has(.panel) .panel{
+    flex:0.7;
+}
+
+/* panel activo al tocar */
+.result-image:has(.panel) .panel.active{
+    flex:6;
+}
 }
 
 /* ================================
