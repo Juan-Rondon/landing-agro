@@ -1964,32 +1964,32 @@ footer {
         font-size: 1rem;
     }
     
-/* Footer */
-.footer-content {
-    grid-template-columns: 1fr;
-    gap: 35px;
-    text-align: left;
-    padding-left: 20px;   /* 🔥 espacio izquierdo */
-    padding-right: 20px;  /* 🔥 espacio derecho */
-}
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-.footer-info,
-.footer-social,
-.footer-map {
-    align-items: flex-start;
-}
+    .footer-info,
+    .footer-social,
+    .footer-map {
+        align-items: flex-start;
+    }
 
-.footer-brand {
-    justify-content: flex-start;
-}
+    .footer-brand {
+        justify-content: flex-start;
+    }
 
-.social-icons {
-    justify-content: flex-start;
-}
+    .social-icons {
+        justify-content: flex-start;
+    }
 
-.footer-map {
-    transform: translateX(0);
-}
+    .footer-map {
+        transform: translateX(0);
+    }
     
     /* WhatsApp Float */
     .whatsapp-float {
@@ -2001,6 +2001,21 @@ footer {
     .float-text {
         font-size: 0.9rem;
     }
+
+/* quitar comportamiento hover */
+.result-image:has(.panel):hover .panel{
+    flex:1;
+}
+
+/* panel normal */
+.result-image:has(.panel) .panel{
+    flex:0.7;
+}
+
+/* panel activo al tocar */
+.result-image:has(.panel) .panel.active{
+    flex:6;
+}
 }
 
 /* ================================

@@ -858,3 +858,22 @@ mobileArrowBtn.addEventListener('click', () => {
   }
 
 });
+
+const panels = document.querySelectorAll(".result-image .panel");
+panels.forEach(panel => {
+    panel.addEventListener("click", () => {
+
+        // si ya está activo lo quitamos
+        if(panel.classList.contains("active")){
+            panel.classList.remove("active");
+            return;
+        }
+
+        // quitamos active de todos
+        panels.forEach(p => p.classList.remove("active"));
+
+        // activamos el que se tocó
+        panel.classList.add("active");
+
+    });
+});
